@@ -26,7 +26,7 @@ export default function Home() {
       <Wave3 />
       <Sobre />
 
-      <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
+      <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
         <img src="/whatsapp.svg"  />
       </a>
       {/*   <div id="footer" className="footer">
