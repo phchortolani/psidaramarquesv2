@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from './src/components/NavBar'
-import LandingPage from './src/components/landing/landingpage'
+import LandingPage from './src/components/landing/LandingPage'
 import AtendimentoOnline from './src/components/atendimento/atendimento'
 import Wave1 from './src/components/waves/Wave1'
 import Wave2 from './src/components/waves/Wave2'
@@ -26,7 +26,7 @@ export default function Home() {
       <Wave3 />
       <Sobre />
 
-     {/*  <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank"  rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
+      {/*  <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank"  rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
         <img src="/whatsapp.svg"  />
       </a> */}
       {/*   <div id="footer" className="footer">
