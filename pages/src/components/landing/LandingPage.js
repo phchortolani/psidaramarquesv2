@@ -1,4 +1,6 @@
-export default function LandingPage() {
+import Image from 'next/image'
+
+export default function LandingPage(props) {
 
     return (
         <section id="homeSection" className="home container">
@@ -11,7 +13,20 @@ export default function LandingPage() {
                     </h3>
                 </div>
                 <div className="landingImgContent p-2">
-                    <img className="landImg" src="/land4.png" />
+                    {!props.isMobile ? <Image
+                        src="/land4.png"
+                        alt="Psicóloga Dara Marques"
+                        width={400}
+                        height={431}
+                    /> : <Image
+                        src="/land4.png"
+                        alt="Psicóloga Dara Marques"
+                        width={340}
+                        height={367}
+                    />
+
+                    }
+                    {/*      <img className="landImg" src="/land4.png" /> */}
                 </div>
                 <div className="descLand">
                     <h4 className="text-muted">

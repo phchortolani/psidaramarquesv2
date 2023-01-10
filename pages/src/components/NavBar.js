@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import Image from "next/image"
 let atendimentoTop, terapiaTop, sobreTop
 export default function NavBar(props) {
     const [navPosition, setNavPosition] = useState(0)
@@ -38,14 +38,20 @@ export default function NavBar(props) {
     return <div id="header" className={"header navbar navbar-light navbar-default navbar-expand-lg navbar-fixed-top navbar-sm " + (navPosition.position > 100 ? "headershadow" : "")}>
 
         <div className="container">
-            <div className="d-none d-md-block ">
+            {/*    <div className="d-none d-md-block ">
                 <a href="./" className="navbar-brand">
                     <img height={65} style={{ width: 'auto' }} src="/soLogo.png"></img>
                 </a>
-            </div>
-            <div className="d-md-none">
+            </div> */}
+            <div >
                 <a href="./" className="navbar-brand">
-                    <img height={65} style={{ width: 'auto' }} src="/soLogo.png"></img>
+                   {/*  <img height={65} style={{ width: 'auto' }} src="/soLogo.png"></img> */}
+                    <Image
+                        src="/soLogo.png"
+                        alt="Logo Dara Marques"
+                        width={86}
+                        height={65}
+                    />
                 </a>
             </div>
 

@@ -1,4 +1,5 @@
-export default function Sobre() {
+import Image from "next/image"
+export default function Sobre(props) {
 
     return (
         <section id="Sobre" className="sobre container">
@@ -10,7 +11,19 @@ export default function Sobre() {
                 <div className="titleLand">
                 </div>
                 <div className="sobreImgContent p-2 text-center">
-                    <img className="landImg" src="/land2.png" />
+                    {/*       <img className="landImg" src="/land2.png" /> */}
+                    {!props.isMobile ? <Image
+                        src="/land2.png"
+                        alt="Psicóloga Dara Marques"
+                        width={400}
+                        height={431}
+                    /> : <Image
+                        src="/land2.png"
+                        alt="Psicóloga Dara Marques"
+                        width={340}
+                        height={367}
+                    />
+                    }
                     <cite className="text-muted pt-2 small">Dara Macedo Marques Hortolani - CRP: 06/164999</cite>
                 </div>
 

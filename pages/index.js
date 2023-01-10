@@ -7,8 +7,14 @@ import Wave2 from './src/components/waves/Wave2'
 import Wave3 from './src/components/waves/Wave3'
 import Terapia from './src/components/terapia/terapia'
 import Sobre from './src/components/sobre/sobre'
+import { useEffect, useState } from 'react'
+
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState()
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(max-width: 600px)").matches)
+  }, [])
   return (
     <>
       <Head>
@@ -18,13 +24,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <LandingPage />
+      <LandingPage isMobile={isMobile} />
       <Wave2 />
-      <AtendimentoOnline />
+      <AtendimentoOnline isMobile={isMobile} />
       <Wave1 />
-      <Terapia />
+      <Terapia isMobile={isMobile} />
       <Wave3 />
-      <Sobre />
+      <Sobre isMobile={isMobile} />
 
       {/*  <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank"  rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
         <img src="/whatsapp.svg"  />

@@ -1,4 +1,5 @@
-export default function Terapia() {
+import Image from "next/image"
+export default function Terapia(props) {
     return <>
         <section id="terapia" className="pb-4">
             <div className="container">
@@ -6,7 +7,20 @@ export default function Terapia() {
                     <h2 className="titleSection">O que a terapia pode cuidar?</h2>
                 </div>
                 <div className="terapiaContent">
-                    <img className="w-100 pb-5" src="/terapia.png"></img>
+                    {!props.isMobile ? <Image
+                        src="/terapia.png"
+                        alt="Psicóloga Dara Marques"
+                        width={648}
+                        height={500}
+                    /> : <Image
+                        src="/terapia.png"
+                        alt="Psicóloga Dara Marques"
+                        width={366}
+                        height={302}
+                    />
+
+                    }
+                 {/*    <img className="w-100 pb-5" src="/terapia.png"></img> */}
 
                     <div className="text-white terapiaList">
                         <ul className="list-unstyled mb-2">
