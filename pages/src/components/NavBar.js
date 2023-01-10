@@ -45,12 +45,13 @@ export default function NavBar(props) {
             </div> */}
             <div >
                 <a href="./" className="navbar-brand">
-                   {/*  <img height={65} style={{ width: 'auto' }} src="/soLogo.png"></img> */}
+                    {/*  <img height={65} style={{ width: 'auto' }} src="/soLogo.png"></img> */}
                     <Image
                         src="/soLogo.png"
                         alt="Logo Dara Marques"
                         width={86}
                         height={65}
+                        className={"logoImg " + (navPosition.position > 100 ? "rolldown" : "")}
                     />
                 </a>
             </div>

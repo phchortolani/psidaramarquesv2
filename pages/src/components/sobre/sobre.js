@@ -12,19 +12,20 @@ export default function Sobre(props) {
                 </div>
                 <div className="sobreImgContent p-2 text-center">
                     {/*       <img className="landImg" src="/land2.png" /> */}
-                    {!props.isMobile ? <Image
-                        src="/land2.png"
+                    {/*     {!props.isMobile ? <Image
+                        src="/sobreImg.png"
                         alt="Psicóloga Dara Marques"
                         width={400}
                         height={431}
                     /> : <Image
-                        src="/land2.png"
+                        src="/sobreImg.png"
                         alt="Psicóloga Dara Marques"
                         width={340}
                         height={367}
                     />
-                    }
-                    <cite className="text-muted pt-2 small">Dara Macedo Marques Hortolani - CRP: 06/164999</cite>
+                    } */}
+                    <img className="sobreImg" alt="Psicóloga Dara Marques" src="/sobreImg.png"></img>
+                    <cite className="text-muted pt-4 small">Dara Macedo Marques Hortolani - CRP: 06/164999</cite>
                 </div>
 
                 <div className=" sobreCards">
