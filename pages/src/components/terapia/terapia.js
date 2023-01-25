@@ -7,7 +7,7 @@ export default function Terapia(props) {
                     <h2 className="titleSection">O que a terapia pode cuidar?</h2>
                 </div>
                 <div className="terapiaContent">
-              {/*       {!props.isMobile ? <Image
+                    {/*       {!props.isMobile ? <Image
                         src="/terapia.png"
                         alt="Psicóloga Dara Marques"
                         width={648}

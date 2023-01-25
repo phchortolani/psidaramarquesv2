@@ -7,6 +7,7 @@ import Wave2 from './src/components/waves/Wave2'
 import Wave3 from './src/components/waves/Wave3'
 import Terapia from './src/components/terapia/terapia'
 import Sobre from './src/components/sobre/sobre'
+import Pergunta from './src/components/pergunta/pergunta'
 import { useEffect, useState } from 'react'
 
 
@@ -31,6 +32,8 @@ export default function Home() {
       <Terapia isMobile={isMobile} />
       <Wave3 />
       <Sobre isMobile={isMobile} />
+
+      <Pergunta isMobile={isMobile} />
 
       {/*  <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank"  rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
         <img src="/whatsapp.svg"  />

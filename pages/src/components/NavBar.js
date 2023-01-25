@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
-let atendimentoTop, terapiaTop, sobreTop
+let atendimentoTop, terapiaTop, sobreTop, perguntasTop
 export default function NavBar(props) {
     const [navPosition, setNavPosition] = useState(0)
 
@@ -13,6 +13,7 @@ export default function NavBar(props) {
                 atendimentoTop = parseInt(document.getElementById("Atendimento").getBoundingClientRect().top)
                 terapiaTop = parseInt(document.getElementById("terapia").getBoundingClientRect().top)
                 sobreTop = parseInt(document.getElementById("Sobre").getBoundingClientRect().top)
+                perguntasTop = parseInt(document.getElementById("Pergunta").getBoundingClientRect().top)
             }
 
 
@@ -28,6 +29,9 @@ export default function NavBar(props) {
             }
             if (window.scrollY + 200 >= sobreTop) {
                 active = "Sobre"
+            }
+            if (window.scrollY + 200 >= perguntasTop) {
+                active = "Pergunta"
             }
             setNavPosition({
                 position: window.scrollY,
@@ -75,9 +79,9 @@ export default function NavBar(props) {
                     <li className="nav-item">
                         <a className={"nav-link px-3 fw-bold  mx-2 " + (navPosition.active == "Sobre" ? "active" : "")} href="#Sobre">Sobre</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link px-3 fw-bold mx-2" href="#">Contato</a>
-                    </li>
+                  {/*   <li className="nav-item">
+                        <a className={"nav-link px-3 fw-bold  mx-2 " + (navPosition.active == "Pergunta" ? "active" : "")} href="#Pergunta">Perguntas</a>
+                    </li> */}
                     {/*  <li className="nav-item">
                         <a className="nav-link px-3 fw-bold mx-2" href="/Blog">Blog</a>
                     </li> */}
