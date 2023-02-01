@@ -54,7 +54,7 @@ export default function PerguntasFrequentes() {
                                 </h2>
                                 <div id={"flush-collapse" + (i)} className="accordion-collapse collapse" aria-labelledby={"flush-heading" + (i)} data-bs-parent="#acPerguntas">
                                     <div className="accordion-body"> {HTMLReactParser(e.resposta)}
-                                        <br /><br /> <a className='btn-land bg-gradient btn-primary btn-inverse' target='_blank' href='https://api.whatsapp.com/send?phone=5511978493885'>Entrar em contato</a>
+                                        <br /><br /> <a className='btn-land bg-gradient btn-primary btn-inverse' target="_blank" rel="noopener noreferrer" href='https://api.whatsapp.com/send?phone=5511978493885'>Entrar em contato</a>
                                     </div>
                                 </div>
                             </div>

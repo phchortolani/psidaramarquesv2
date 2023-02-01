@@ -85,7 +85,7 @@ export default function Home({ data }) {
                     <b> psi.daramarques@gmail.com</b>
                   </li>
                   <li >
-                    <a href="https://www.instagram.com/psidaramarques/" target={"_blank"}>
+                    <a href="https://www.instagram.com/psidaramarques/" target="_blank" rel="noopener noreferrer">
                       <span>
                         <i aria-hidden="true" className="fab fa-instagram"></i>
                       </span>
@@ -93,7 +93,7 @@ export default function Home({ data }) {
                     </a>
                   </li>
                   <li >
-                    <a href="https://www.facebook.com/psidaramarques" target={"_blank"}>
+                    <a href="https://www.facebook.com/psidaramarques" target="_blank" rel="noopener noreferrer">
                       <span >
                         <i aria-hidden="true" className="fab fa-facebook-square"></i></span>
                       <b> @psidaramarques</b>
@@ -110,7 +110,7 @@ export default function Home({ data }) {
       <div className="pb-2 mb-2" style={{ color: "black", textAlign: "center" }}>
         <span className="text-muted small">
           <span className="text-center text-muted ">
-            <a href="https://lanisystems.vercel.app" target={'_blank'}> <img src="/lani-5andar1.svg" width={110}></img></a>
+            <a href="https://lanisystems.vercel.app" target="_blank" rel="noopener noreferrer"> <img src="/lani-5andar1.svg" width={110}></img></a>
           </span>
         </span>
       </div>
