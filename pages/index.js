@@ -24,6 +24,7 @@ export async function getServerSideProps(context) {
     props: {
       data: json.data,
       revalidate: 20
+
     },
   };
 }
@@ -61,30 +62,22 @@ export default function Home({ data }) {
         <div className=' whats shadow'>
           <i className="fab fa-whatsapp fa-3x text-white"></i>
         </div>
-
       </a>
 
       <section id="Contato">
         <div id="footer" className="footer">
           <div className="container">
             <div className="d-flex justify-content-around">
-              <div className='text-start'>
+              <div>
                 <h3 className='text-primary'><b>Informações</b></h3>
-                <ul style={{ listStyle: "none" }} className='p-0'>
-                  <li>
+                <ul style={{ listStyle: "none" }} className='p-1'>
+                  <li className='mb-2'>
                     <span>
                       <i aria-hidden="true" className="fas fa-mobile-alt"></i>
                       <b> +55 (11) 97849-3885</b>
                     </span>
-
                   </li>
-                  <li>
-                    <span>
-                      <i aria-hidden="true" className="far fa-envelope"></i>
-                    </span>
-                    <b> psi.daramarques@gmail.com</b>
-                  </li>
-                  <li >
+                  <li className='mb-2'>
                     <a href="https://www.instagram.com/psidaramarques/" target="_blank" rel="noopener noreferrer">
                       <span>
                         <i aria-hidden="true" className="fab fa-instagram"></i>
@@ -92,25 +85,30 @@ export default function Home({ data }) {
                       <b> @psidaramarques</b>
                     </a>
                   </li>
-                  <li >
+                  <li className='mb-2'>
                     <a href="https://www.facebook.com/psidaramarques" target="_blank" rel="noopener noreferrer">
                       <span >
                         <i aria-hidden="true" className="fab fa-facebook-square"></i></span>
                       <b> @psidaramarques</b>
                     </a>
                   </li>
+                  <li className='mb-2'>
+                    <span>
+                      <i aria-hidden="true" className="far fa-envelope"></i>
+                    </span>
+                    <b> psi.daramarques@gmail.com</b>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <hr className="mt-0"></hr>
-
       </section>
-      <div className="pb-2 mb-2" style={{ color: "black", textAlign: "center" }}>
+      <hr className="mt-0 mb-0"></hr>
+      <div className="py-1" style={{ color: "black", textAlign: "center", background: "#ede7fb" }}>
         <span className="text-muted small">
           <span className="text-center text-muted ">
-            <a href="https://lanisystems.vercel.app" target="_blank" rel="noopener noreferrer"> <img src="/lani-5andar1.svg" width={110}></img></a>
+            Powered by<br /><a href="https://lanisystems.vercel.app" target="_blank" rel="noopener noreferrer"> <img src="/lani-5andar1.svg" width={100}></img></a>
           </span>
         </span>
       </div>
