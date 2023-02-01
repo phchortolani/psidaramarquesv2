@@ -39,7 +39,7 @@ export default function Terapia(props) {
             <h4 className="titleSection">Terapia Cognitivo-Comportamental</h4>
         </div>
         <div className="text-white">
-            <p>Como saber se a TCC é a melhor escolha para você? A Terapia Cognitivo-Comportamental (TCC) é uma abordagem eficaz para tratar uma ampla gama de questões emocionais e psicológicas.  Aqui estão algumas indicações:                                                                                                               </p>
+            <p>A Terapia Cognitivo-Comportamental (TCC) é uma abordagem eficaz para tratar uma ampla gama de questões emocionais e psicológicas.  Aqui estão algumas indicações:                                                                                                               </p>
             <p>1. Você está buscando ajuda para gerenciar pensamentos e emoções negativas.                                                                                                                                                                                                                                                             </p>
             <p>2. Você deseja desenvolver habilidades para lidar com situações estressantes.                                                                                                                                                                                                                                                           </p>
             <p>3. Você quer mudar comportamentos e hábitos nocivos.                                                                                                                                                                                                                                                                                    </p>
@@ -55,7 +55,7 @@ export default function Terapia(props) {
             <h4 className="titleSection">Psicoterapia</h4>
         </div>
         <div className="text-white">
-            <p> Como saber se você precisa de uma terapia? A psicoterapia pode ajudar a resolver questões emocionais e psicológicas que afetam a qualidade de vida. Aqui estão algumas indicações para considerar:                                                                                                                                       </p>
+            <p>A psicoterapia pode ajudar a resolver questões emocionais e psicológicas que afetam a qualidade de vida. Aqui estão algumas indicações para considerar:                                                                                                                                       </p>
             <p>1. Você está enfrentando problemas persistentes, como ansiedade, depressão ou dificuldades relacionais.                                                                                                                                                                                                                                         </p>
             <p>2. Você está lidando com eventos de vida difíceis, como perda, mudanças de vida significativas ou traumas.                                                                                                                                                                                                                                      </p>
             <p>3. Você tem dificuldades para lidar com as emoções e os pensamentos negativos.                                                                                                                                                                                                                                                                  </p>
@@ -71,7 +71,7 @@ export default function Terapia(props) {
         <section id="terapia" className="pb-4">
             <div className="container">
                 <div className="headerSection">
-                    <h2 className="titleSection">Como a terapia pode me ajuda?</h2>
+                    <h2 className="titleSection">Como a terapia pode me ajudar?</h2>
                 </div>
                 <div className="terapiaContent">
                     {psi}
