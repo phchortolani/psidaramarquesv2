@@ -47,11 +47,11 @@ export default function Home({ data }) {
       </Head>
       <Navbar />
       <LandingPage isMobile={isMobile} />
-      <Wave2 />
+      <img src="/Wave2.svg" />
       <AtendimentoOnline isMobile={isMobile} />
-      <Wave1 />
+      <img className="wave1Back" src="/Wave1.svg" />
       <Terapia isMobile={isMobile} />
-      <Wave3 />
+      <img src="/Wave3.svg" />
       <Sobre isMobile={isMobile} />
       <Pergunta isMobile={isMobile} />
       <Blog data={data} />
