@@ -13,17 +13,18 @@ import { useEffect, useState } from 'react'
 
 
 export async function getStaticProps() {
-  let url =
-    "https://graph.instagram.com/me/media?access_token=" +
+  let url = "https://graph.instagram.com/me/media?access_token=" +
     process.env.INSTA_TOKEN +
     "&fields=media_url,media_type,caption,permalink,timestamp,thumbnail_url,id,username,children{media_url}&limit=8";
 
+   
   const res = await fetch(url);
-  const json = await res.json();
+  console.log(res)
+  const json = res ? await res.json() : "";
 
   return {
     props: {
-      data: json.data,
+      data: res ? json.data : "",
       revalidate: 60
     },
   };
