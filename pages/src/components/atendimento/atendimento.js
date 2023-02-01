@@ -9,27 +9,27 @@ export default function AtendimentoOnline() {
                     <div className="atendimentoContent">
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Praticidade</h3>
-                            <p>Facilidade para conseguir encontrar um psicólogo que você se identifica e que percebe que pode te ajudar no seu problema.</p>
+                            <p>Sem a necessidade de deslocamento até o consultório, você pode realizar suas sessões de onde estiver, basta ter uma conexão à internet e um dispositivo móvel ou computador.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Comodidade</h3>
-                            <p>Você pode fazer na sua casa ou em qualquer lugar que você se sinta confortável, sem precisar gastar dinheiro com gasolina e transporte público.</p>
+                            <p>Realizar terapia de conforto de sua própria casa ou local de escolha pode ser muito mais confortável para algumas pessoas.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Sigilo</h3>
-                            <p>O sigilo acontece da mesma forma que um atendimento presencial, mas nesse caso é importante que o paciente auxilie estando num ambiente que se sente confortável e seguro para que as informações não sejam ouvidas por outras pessoas.</p>
+                            <p>As sessões on-line são tão confidenciais quanto as sessões presenciais, garantindo que suas informações pessoais e terapêuticas permaneçam seguras.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Horários flexíveis</h3>
-                            <p>Por conta da praticidade tanto para os pacientes quanto para os psicólogos, os horários de agendamentos podem ser mais flexíveis.</p>
+                            <p>Com a possibilidade de agendar sessões em horários que sejam convenientes para você, é possível conciliar terapia com sua rotina diária.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Mesma qualidade</h3>
-                            <p>A terapia funciona da mesma forma que uma terapia presencial e por isso qualquer demanda ou questão levada pelo paciente o serviço será prestado com qualidade.</p>
+                            <p>Não há diferença na qualidade da terapia entre as sessões on-line e presenciais. O servico será prestado com qualidade independente da demanda ou questão levada pelo paciente.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Vínculo terapêutico</h3>
-                            <p>Na terapia online o vínculo terapêutico também existe e é construído da mesma forma que no presencial.</p>
+                            <p>O vínculo terapêutico é essencial em qualquer tipo de terapia, e isso não muda na terapia on-line.</p>
 
                         </div>
                     </div>
