@@ -1,10 +1,10 @@
 export default function AtendimentoOnline() {
     return (
         <>
-            <section id="Atendimento">
+            <section id="Atendimento" className="">
                 <div className="container pb-5">
                     <div className="headerSection">
-                        <h2 className="titleSection">Entenda as vantagens da terapia on-line</h2>
+                        <h2 className="titleSection py-3">Entenda as vantagens da terapia on-line</h2>
                     </div>
                     <div className="atendimentoContent">
                         <div className="atendimentoCards">
@@ -34,7 +34,9 @@ export default function AtendimentoOnline() {
                         </div>
                     </div>
                 </div>
-
+                <div className="d-flex text-center justify-content-center pb-5">
+                    <button className="btn-land bg-gradient btn btn-lg btn-primary " onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Tire suas dúvidas</button>
+                </div>
             </section>
         </>)
 }

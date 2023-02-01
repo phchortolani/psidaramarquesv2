@@ -8,14 +8,36 @@ import Wave3 from './src/components/waves/Wave3'
 import Terapia from './src/components/terapia/terapia'
 import Sobre from './src/components/sobre/sobre'
 import Pergunta from './src/components/pergunta/pergunta'
+import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
 
 
-export default function Home() {
+export async function getStaticProps() {
+  let url =
+    "https://graph.instagram.com/me/media?access_token=" +
+    process.env.INSTA_TOKEN +
+    "&fields=media_url,media_type,caption,permalink,timestamp,thumbnail_url,id,username,children{media_url}&limit=8";
+
+  const res = await fetch(url);
+  const json = await res.json();
+
+  return {
+    props: {
+      data: json.data,
+      revalidate: 60
+    },
+  };
+}
+
+
+
+
+export default function Home({ data }) {
   const [isMobile, setIsMobile] = useState()
   useEffect(() => {
     setIsMobile(window.matchMedia("(max-width: 600px)").matches)
   }, [])
+
   return (
     <>
       <Head>
@@ -32,22 +54,67 @@ export default function Home() {
       <Terapia isMobile={isMobile} />
       <Wave3 />
       <Sobre isMobile={isMobile} />
-
       <Pergunta isMobile={isMobile} />
+      <Blog data={data} />
 
-      {/*  <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank"  rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
-        <img src="/whatsapp.svg"  />
-      </a> */}
-      {/*   <div id="footer" className="footer">
-                    <div className={isMobile ? "" : "container"}>
-                        <div className="footer-brand">
-                            <img height={70} style={{filter: "color(""/)"}} width={70} src="./logoDara.svg"/>
-                        </div>
-                   
-                     
-                    </div>
-                </div> */}
 
+      <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
+        <div className=' whats shadow'>
+          <i className="fab fa-whatsapp fa-3x text-white"></i>
+        </div>
+
+      </a>
+
+      <section id="Contato">
+        <div id="footer" className="footer">
+          <div className="container">
+            <div className="d-flex justify-content-around">
+              <div className='text-start'>
+                <h3 className='text-primary'><b>Informações</b></h3>
+                <ul style={{ listStyle: "none" }} className='p-0'>
+                  <li>
+                    <span>
+                      <i aria-hidden="true" className="fas fa-mobile-alt"></i>
+                      <b> +55 (11) 97849-3885</b>
+                    </span>
+
+                  </li>
+                  <li>
+                    <span>
+                      <i aria-hidden="true" className="far fa-envelope"></i>
+                    </span>
+                    <b> psi.daramarques@gmail.com</b>
+                  </li>
+                  <li >
+                    <a href="https://www.instagram.com/psidaramarques/" target={"_blank"}>
+                      <span>
+                        <i aria-hidden="true" className="fab fa-instagram"></i>
+                      </span>
+                      <b> @psidaramarques</b>
+                    </a>
+                  </li>
+                  <li >
+                    <a href="https://www.facebook.com/psidaramarques" target={"_blank"}>
+                      <span >
+                        <i aria-hidden="true" className="fab fa-facebook-square"></i></span>
+                      <b> @psidaramarques</b>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="mt-0"></hr>
+
+      </section>
+      <div className="pb-2 mb-2" style={{ color: "black", textAlign: "center" }}>
+        <span className="text-muted small">
+          <span className="text-center text-muted ">
+            <a href="https://lanisystems.vercel.app" target={'_blank'}> <img src="/lani-5andar1.svg" width={110}></img></a>
+          </span>
+        </span>
+      </div>
 
       {/*   <footer className="pb-2 mb-2" style={{ background: "#d0b3b5", color: "black", textAlign: "center" }}>
                     <hr className="mt-0"></hr>

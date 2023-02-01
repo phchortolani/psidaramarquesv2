@@ -26,6 +26,7 @@ a {
   text-decoration: none;
 }
 
+
 body::-webkit-scrollbar {
   width: 6px;
   /* width of the entire scrollbar */
@@ -49,7 +50,57 @@ body::-webkit-scrollbar-thumb {
 
 @media (prefers-color-scheme: dark) {}
 
+#footer {
+  background: #ede7fb;
+  height: 30vh;
+  padding-top: 1.5rem;
+  text-align: center;
+}
 
+.whats {
+  border-radius: 15px !important;
+  padding: 0.5em;
+  background-color: #25D366;
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #212529;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
+}
+
+
+.bgCardRoxo {
+
+  padding: 0.5rem 1.5em;
+  border-radius: 20px;
+  margin: 5px;
+  background: #7f73d0;
+  min-height: 41rem;
+  height: 100%;
+}
+
+.bgCardLight {
+  padding: 1rem 2em;
+  border-radius: 20px;
+  margin: 0 5px;
+  background: #7f73d0;
+  min-height: 41rem;
+}
+
+.terapiaList {
+  display: grid;
+
+}
 
 /*land*/
 
@@ -75,7 +126,7 @@ body::-webkit-scrollbar-thumb {
 
   /*   max-width: 6.4rem; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   text-align: left;
   margin: 0 auto;
   align-items: center;
@@ -331,6 +382,14 @@ section.sobre {
   place-content: center;
 }
 
+section#blog {
+  min-height: 80vh;
+  display: grid;
+  place-content: center;
+  background-color: #7f73d0;
+  background-image: linear-gradient(180deg, #7f73d0 60%, #ede7fb 50%);
+}
+
 
 .aboutText {
   font-size: 16px;
@@ -377,7 +436,17 @@ section.terapia {
 
 .headerSection {
   text-align: center;
+  padding: 1rem 0;
+}
+
+.headerSectionTerapia {
+  text-align: center;
   padding: 3.0rem 0;
+}
+
+.headerSectionTerapia>.titleSection {
+
+  font-size: 1.5rem;
 }
 
 .titleSection {
@@ -392,8 +461,8 @@ section.terapia {
   justify-content: flex-start;
   gap: 0.5rem !important;
   margin-top: 2rem;
-
 }
+
 
 .landImg {
   width: 400px;
@@ -416,16 +485,7 @@ section.terapia {
 }
 
 
-.terapiaList {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.9fr;
-  font-size: 16px;
-  text-align: left;
-  margin: 0 auto;
-  grid-gap: 3em;
-  gap: 3em;
-}
+
 
 #Atendimento {
   background: #e9e3f9 !important;
@@ -449,7 +509,7 @@ section.terapia {
   .terapiaContent {
     display: unset;
     width: 100%;
-    text-align: center;
+    /*  text-align: center; */
   }
 
   .btnsLand {

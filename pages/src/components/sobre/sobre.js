@@ -4,7 +4,7 @@ export default function Sobre(props) {
     return (
         <section id="Sobre" className="sobre container">
             <div className="headerSection">
-                <h2 className="titleSection">Sobre</h2>
+                <h2 className="titleSection">Sobre mim</h2>
             </div>
             <div className="sobreContent  ">
 
@@ -25,13 +25,16 @@ export default function Sobre(props) {
                     />
                     } */}
                     <img className="sobreImg" alt="Psicóloga Dara Marques" src="/sobreImg.png"></img>
-                    <cite className="text-muted pt-4 small">Dara Macedo Marques Hortolani - CRP: 06/164999</cite>
+                    {/*   <cite className="text-muted pt-4 small">Dara Macedo Marques Hortolani - CRP 06/164999</cite> */}
                 </div>
 
                 <div className=" sobreCards">
                     <div className="text-muted aboutText">
-                        <h2 className="text-primary pb-2">Olá! Eu sou a Dara Marques</h2>
-                        <p> Primeiramente gostaria de dizer que sou apaixonada pela psicologia e amo ajudar pessoas a se desenvolverem e entenderem melhor a si mesmas com a psicoterapia, e a partir disso, ir fazendo mudanças saudáveis e duradouras.</p>
+                        <h5>
+                            <b className="text-primary ">Dara Macedo Marques Hortolani <b className="text-muted pt-4 small">- CRP 06/164999</b></b>
+                        </h5>
+                        <br></br>
+                        <p>Olá, me chamo Dara e primeiramente gostaria de dizer que sou apaixonada pela psicologia e amo ajudar pessoas a se desenvolverem e entenderem melhor a si mesmas com a psicoterapia, e a partir disso, ir fazendo mudanças saudáveis e duradouras.</p>
                         <p> É gratificante vê-las se descobrindo, sabendo lidar de uma forma mais saudável com seus sentimentos, mudando hábitos de comportamento e tendo uma vida mais leve!   </p>
                         <p>Sou graduada em psicologia pela universidade Metodista de São Paulo, com formação em <b className="text-primary">Terapia Cognitivo-Comportamental (TCC)</b>.</p>
                         <p>Trabalho com atendimento clínico na modalidade on-line para adultos e adolescentes do <b className="text-primary">sexo feminino.</b></p>

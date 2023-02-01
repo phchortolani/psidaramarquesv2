@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
-let atendimentoTop, terapiaTop, sobreTop, perguntasTop
+let atendimentoTop, terapiaTop, sobreTop, perguntasTop, contatoTop
 export default function NavBar(props) {
     const [navPosition, setNavPosition] = useState(0)
 
@@ -14,6 +14,7 @@ export default function NavBar(props) {
                 terapiaTop = parseInt(document.getElementById("terapia").getBoundingClientRect().top)
                 sobreTop = parseInt(document.getElementById("Sobre").getBoundingClientRect().top)
                 perguntasTop = parseInt(document.getElementById("Pergunta").getBoundingClientRect().top)
+                contatoTop = parseInt(document.getElementById("Pergunta").getBoundingClientRect().top)
             }
 
 
@@ -32,6 +33,9 @@ export default function NavBar(props) {
             }
             if (window.scrollY + 200 >= perguntasTop) {
                 active = "Pergunta"
+            }
+            if (window.scrollY + 200 >= contatoTop) {
+                active = "Contato"
             }
             setNavPosition({
                 position: window.scrollY,
@@ -79,7 +83,10 @@ export default function NavBar(props) {
                     <li className="nav-item">
                         <a className={"nav-link px-3 fw-bold  mx-2 " + (navPosition.active == "Sobre" ? "active" : "")} href="#Sobre">Sobre</a>
                     </li>
-                  {/*   <li className="nav-item">
+                    <li className="nav-item">
+                        <a className={"nav-link px-3 fw-bold  mx-2 " + (navPosition.active == "Contato" ? "active" : "")} href="#Contato">Contato</a>
+                    </li>
+                    {/*   <li className="nav-item">
                         <a className={"nav-link px-3 fw-bold  mx-2 " + (navPosition.active == "Pergunta" ? "active" : "")} href="#Pergunta">Perguntas</a>
                     </li> */}
                     {/*  <li className="nav-item">

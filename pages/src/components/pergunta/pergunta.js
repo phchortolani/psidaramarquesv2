@@ -3,6 +3,11 @@ import HTMLReactParser from 'html-react-parser'
 export default function PerguntasFrequentes() {
     const peguntas = [
         {
+            pergunta: "Como funciona a terapia on-line?",
+            resposta: "<p>Os atendimentos psicológicos são feito por vídeo chamada, onde conversaremos da mesma forma como se estivéssemos juntos no consultório. Você precisará ter um celular, tablet ou computador com câmera; internet com boa velocidade e fones de ouvido com microfone. E para que o sigilo das sessões não seja comprometido, você deverá escolher um espaço fechado e tranquilo, para que se sinta mais confortável e seguro em compartilhar suas informações comigo.</p>" +
+                "<p>Plataformas utilizadas para o atendimento: <b>ZOOM</b>, <b>Google Meet</b> e <b>WhatsApp</b>.</p>"
+        },
+        {
             pergunta: "Quanto tempo dura uma sessão?",
             resposta: "Dura em torno de 50 minutos a 1 hora."
         },
@@ -20,38 +25,23 @@ export default function PerguntasFrequentes() {
         },
         {
             pergunta: "Você atende por convênio?",
-            resposta: "Não atendo por convênio. Meus atendimentos são particulares. Mas ofereço recibo para que você consiga o reembolso. Entre em contato com seu convênio para saber se você tem essa opção."
-        },
+            resposta: "Não atendo pacientes por convênios médicos. Meus atendimentos são particulares, mas posso fornecer um recibo para reembolso, caso seu convênio ofereça esta opção. Favor verificar as condições com seu plano de saúde antes de marcar uma consulta."
+        }
+        ,
         {
-            pergunta: "Será que a abordagem Terapia Cognitivo-Comportamental serve para mim?",
-            resposta: "É uma abordagem clara e direta. É utilizada para tratar diversos transtornos  mentais de forma eficiente. Identificar padrões de comportamento, pensamento, crenças. Se destina para vários  transtornos desde alimentares, fobias, traumas depressão, ansiedade."
-        },
-        {
-            pergunta: "Como funciona a terapia on-line?",
-            resposta: "<p>Os atendimentos psicológicos são feito por vídeo chamada, onde conversaremos da mesma forma como se estivéssemos juntos no consultório. Você precisará ter um celular, tablet ou computador com câmera; internet com boa velocidade e fones de ouvido com microfone. E para que o sigilo das sessões não seja comprometido, você deverá escolher um espaço fechado e tranquilo, para que se sinta mais confortável e seguro em compartilhar suas informações comigo.</p>" +
-                "<p>Plataformas utilizadas para o atendimento: <b>ZOOM</b>, <b>Google Meet</b> e <b>WhatsApp</b>.</p>"
-        },
-        {
-            pergunta: "Como faço para agendar uma consulta?",
+            pergunta: "Como agendo uma consulta?",
             resposta: "<p> 1. Entre em contato comigo por WhatsApp; </p>" +
                 "<p> 2. Escolha o melhor horário para ser atendido; </p>" +
                 "<p> 3. Faça o pagamento da sessão (Cartão, Transferência ou PIX); </p>" +
                 "<p>4. No momento da consulta, certifique-se que está com um bom sinal de internet e aguarde ser atendido.</p>"
-        },
-        {
-            pergunta: "Como saber se preciso de psicoterapia? ",
-            resposta: "<p>Gosto de dividir essa pergunta em 3 grupos, sendo eles: </p>" +
-                "<p> - Pessoas que tem um diagnóstico de um transtorno mental e que automaticamente necessita de um tratamento e acompanhamento psicológico. Como depressão, transtornos de ansiedade e etc... </p>" +
-                "<p> - Pessoas que não tem um diagnóstico de transtorno mental, mas apresenta questões pontuais, como dificuldade para tomar decisões, dificuldade para lidar com alguma área específica da vida, dificuldade para lidar com seus sentimentos e pensamentos e necessita da ajuda de um profissional. </p>" +
-                "<p> - Outras pessoas se motivam a procurar pela terapia mesmo sem identificar um problema específico,  seja apenas pela busca do autoconhecimento e etc... </p>"
         }
     ]
 
     return (
-        <section id="Pergunta" className="pergunta ">
+        <section id="Pergunta" className="pergunta">
             <div className='container'>
                 <div className="headerSection">
-                    <h2 className="titleSection text-white">Perguntas Frequentes</h2>
+                    <h2 className="titleSection text-white mt-5">Perguntas Frequentes</h2>
                 </div>
                 <div className="perguntasContent pb-4">
                     <div className="accordion" id="acPerguntas">
@@ -63,7 +53,9 @@ export default function PerguntasFrequentes() {
                                     </button>
                                 </h2>
                                 <div id={"flush-collapse" + (i)} className="accordion-collapse collapse" aria-labelledby={"flush-heading" + (i)} data-bs-parent="#acPerguntas">
-                                    <div className="accordion-body"> {HTMLReactParser(e.resposta)}</div>
+                                    <div className="accordion-body"> {HTMLReactParser(e.resposta)}
+                                        <br /><br /> <a className='btn-land bg-gradient btn-primary btn-inverse' target='_blank' href='https://api.whatsapp.com/send?phone=5511978493885'>Entrar em contato</a>
+                                    </div>
                                 </div>
                             </div>
                         })}
@@ -72,6 +64,6 @@ export default function PerguntasFrequentes() {
                 </div>
             </div>
 
-        </section>
+        </section >
     )
 }
