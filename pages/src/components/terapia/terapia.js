@@ -7,7 +7,7 @@ export default function Terapia(props) {
 
     const sintomas = <div className="text-white bgCardRoxo shadow">
         <div className="headerSectionTerapia">
-            <h4 className="titleSection">Sintomas</h4>
+            <h4 className="titleSection">Tipos de tratamento</h4>
         </div>
 
         <ul>
@@ -71,7 +71,7 @@ export default function Terapia(props) {
         <section id="terapia" className="pb-4">
             <div className="container">
                 <div className="headerSection">
-                    <h2 className="titleSection">Como saber se a terapia serve pra mim?</h2>
+                    <h2 className="titleSection">Como a terapia pode me ajuda?</h2>
                 </div>
                 <div className="terapiaContent">
                     {psi}

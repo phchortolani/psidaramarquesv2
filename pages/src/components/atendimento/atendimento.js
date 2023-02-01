@@ -16,7 +16,7 @@ export default function AtendimentoOnline() {
                             <p>Você pode fazer na sua casa ou em qualquer lugar que você se sinta confortável, sem precisar gastar dinheiro com gasolina e transporte público.</p>
                         </div>
                         <div className="atendimentoCards">
-                            <h3 className="text-primary">Sigiloso</h3>
+                            <h3 className="text-primary">Sigilo</h3>
                             <p>O sigilo acontece da mesma forma que um atendimento presencial, mas nesse caso é importante que o paciente auxilie estando num ambiente que se sente confortável e seguro para que as informações não sejam ouvidas por outras pessoas.</p>
                         </div>
                         <div className="atendimentoCards">
