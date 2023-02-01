@@ -52,6 +52,7 @@ function Blog({ data }) {
                                                 height={340}
                                                 src={e.media_url}
                                                 alt={title}
+                                                style={{ objectFit: "cover" }}
                                             />
                                         </a></div>
                                     );

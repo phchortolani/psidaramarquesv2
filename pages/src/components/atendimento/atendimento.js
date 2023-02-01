@@ -13,7 +13,7 @@ export default function AtendimentoOnline() {
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Comodidade</h3>
-                            <p>Realizar terapia de conforto de sua própria casa ou local de escolha pode ser muito mais confortável para algumas pessoas.</p>
+                            <p>Realizar terapia no conforto da própria casa ou em outro local de sua preferência pode ser muito mais acolhedor e confortável.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h3 className="text-primary">Sigilo</h3>

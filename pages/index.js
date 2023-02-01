@@ -12,7 +12,7 @@ import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
 
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
   let url = "https://graph.instagram.com/me/media?access_token=" +
     process.env.INSTA_TOKEN +
     "&fields=media_url,media_type,caption,permalink,timestamp,thumbnail_url,id,username,children{media_url}&limit=8";
@@ -23,7 +23,7 @@ export async function getStaticProps() {
   return {
     props: {
       data: json.data,
-      revalidate: 60
+      revalidate: 20
     },
   };
 }
