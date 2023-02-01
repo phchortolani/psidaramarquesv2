@@ -17,14 +17,12 @@ export async function getStaticProps() {
     process.env.INSTA_TOKEN +
     "&fields=media_url,media_type,caption,permalink,timestamp,thumbnail_url,id,username,children{media_url}&limit=8";
 
-   
   const res = await fetch(url);
-  console.log(res)
-  const json = res ? await res.json() : "";
+  const json = await res.json();
 
   return {
     props: {
-      data: res ? json.data : "",
+      data: json.data,
       revalidate: 60
     },
   };
