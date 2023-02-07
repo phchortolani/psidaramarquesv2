@@ -18,11 +18,13 @@ export default function LandingPage(props) {
                         alt="Psicóloga Dara Marques"
                         width={400}
                         height={431}
+                        loading="lazy"
                     /> : <Image
                         src="/land4.png"
                         alt="Psicóloga Dara Marques"
                         width={340}
                         height={367}
+                        loading="lazy"
                     />
 
                     }

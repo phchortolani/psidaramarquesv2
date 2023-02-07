@@ -9,7 +9,7 @@ import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
 
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   let url = "https://graph.instagram.com/me/media?access_token=" +
     process.env.INSTA_TOKEN +
     "&fields=media_url,media_type,caption,permalink,timestamp,thumbnail_url,id,username,children{media_url}&limit=8";
@@ -20,14 +20,11 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data: json.data,
-      revalidate: 20
-
     },
-  };
+    revalidate: 60, /* In seconds */
+
+  }
 }
-
-
-
 
 export default function Home({ data }) {
   const [isMobile, setIsMobile] = useState()
