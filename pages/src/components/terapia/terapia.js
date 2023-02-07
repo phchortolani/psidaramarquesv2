@@ -1,8 +1,3 @@
-import Image from "next/image"
-
-
-
-
 export default function Terapia(props) {
 
     const sintomas = <div className="text-white bgCardRoxo shadow">
