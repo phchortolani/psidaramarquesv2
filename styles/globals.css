@@ -524,8 +524,8 @@ section.terapia {
 
 .logoImg {
   color: transparent;
-  background: white;
-  border-radius: 100%;
+ /*  background: white; */
+  /* border-radius: 100%; */
   transition: 300ms;
 }
 

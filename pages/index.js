@@ -7,7 +7,7 @@ import Sobre from './src/components/sobre/sobre'
 import Pergunta from './src/components/pergunta/pergunta'
 import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
-
+import Image from 'next/image'
 
 export async function getStaticProps(context) {
   let url = "https://graph.instagram.com/me/media?access_token=" +
@@ -52,7 +52,7 @@ export default function Home({ data }) {
       <Blog data={data} />
 
 
-   {/*    <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
+      {/*    <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
         <div className=' whats shadow'>
           <i className="fab fa-whatsapp fa-3x text-white"></i>
         </div>
@@ -63,6 +63,14 @@ export default function Home({ data }) {
           <div className="container">
             <div className="d-flex justify-content-around">
               <div>
+                <div className='mb-2'>  <Image
+                  src="/soLogo2.png"
+                  alt="Logo Dara Marques"
+                  width={86}
+                  height={65}
+                  className={"logoImg"}
+                />
+                </div>
                 <h3 className='text-primary'><b>Informações</b></h3>
                 <ul style={{ listStyle: "none" }} className='p-1'>
                   <li className='mb-2'>
