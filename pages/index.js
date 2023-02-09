@@ -52,11 +52,11 @@ export default function Home({ data }) {
       <Blog data={data} />
 
 
-      <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
+   {/*    <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
         <div className=' whats shadow'>
           <i className="fab fa-whatsapp fa-3x text-white"></i>
         </div>
-      </a>
+      </a> */}
 
       <section id="Contato">
         <div id="footer" className="footer">
