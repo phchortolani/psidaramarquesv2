@@ -33,7 +33,7 @@ function Blog({ data }) {
                                     if (e.media_type == "VIDEO") {
 
                                         return <div key={i} className="col "><a href={e.permalink} target="_blank" rel="noopener noreferrer">
-                                            <Image
+                                            <img
                                                 className="px-1 mb-2 instaPost"
                                                 width={340}
                                                 height={340}
@@ -46,7 +46,7 @@ function Blog({ data }) {
                                     }
                                     return (
                                         <div key={i} className="col "><a href={e.permalink} target="_blank" rel="noopener noreferrer">
-                                            <Image
+                                            <img
                                                 className="px-1 mb-2 instaPost"
                                                 width={340}
                                                 height={340}
