@@ -57,7 +57,7 @@ export default function NavBar(props) {
                     <a href="./" className="navbar-brand">
                         {/*  <img height={65} style={{ width: 'auto' }} src="/soLogo.png"></img> */}
                         <Image
-                            src="/soLogo.png"
+                            src="/soLogo2.png"
                             alt="Logo Dara Marques"
                             width={86}
                             height={65}
