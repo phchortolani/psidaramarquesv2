@@ -46,7 +46,17 @@ body::-webkit-scrollbar-thumb {
   /* creates padding around scroll thumb */
 }
 
+.instaPost {
+  transition: 400ms;
+  border-radius: 20px;
+}
 
+.instaPost:hover {
+  scale: 1.02;
+  transition: 400ms;
+  box-shadow: 10px 10px 10px #a1a1a1;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
 
 @media (prefers-color-scheme: dark) {}
 

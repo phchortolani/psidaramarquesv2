@@ -44,7 +44,7 @@ export default function PerguntasFrequentes() {
                     <h2 className="titleSection text-white mt-5">Perguntas Frequentes</h2>
                 </div>
                 <div className="perguntasContent pb-4">
-                    <div className="accordion" id="acPerguntas">
+                    <div className="accordion shadow" id="acPerguntas">
                         {peguntas.map((e, i) => {
                             return <div key={i} className="accordion-item">
                                 <h2 className="accordion-header" id={"flush-heading" + (i)}>

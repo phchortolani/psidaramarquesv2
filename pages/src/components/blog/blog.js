@@ -32,9 +32,9 @@ function Blog({ data }) {
 
                                     if (e.media_type == "VIDEO") {
 
-                                        return <div key={i} className="col"><a href={e.permalink} target="_blank" rel="noopener noreferrer">
-                                            <img
-                                                className="px-1 mb-2"
+                                        return <div key={i} className="col "><a href={e.permalink} target="_blank" rel="noopener noreferrer">
+                                            <Image
+                                                className="px-1 mb-2 instaPost"
                                                 width={340}
                                                 height={340}
                                                 src={e.thumbnail_url}
@@ -45,9 +45,9 @@ function Blog({ data }) {
                                         </a> </div>
                                     }
                                     return (
-                                        <div key={i} className="col"><a href={e.permalink} target="_blank" rel="noopener noreferrer">
-                                            <img
-                                                className="px-1 mb-2"
+                                        <div key={i} className="col "><a href={e.permalink} target="_blank" rel="noopener noreferrer">
+                                            <Image
+                                                className="px-1 mb-2 instaPost"
                                                 width={340}
                                                 height={340}
                                                 src={e.media_url}
