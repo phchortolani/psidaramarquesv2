@@ -33,16 +33,25 @@ function Blog({ data }) {
                                     if (e.media_type == "VIDEO") {
 
                                         return <div key={i} className="col "><a href={e.permalink} target="_blank" rel="noopener noreferrer">
-                                            <img
-                                                className="px-1 mb-2 instaPost"
-                                                width={340}
-                                                height={340}
-                                                src={e.thumbnail_url}
-                                                alt={title}
-                                                style={{ objectFit: "cover" }}
-                                            />
-                                            {/*                    <video width={380} height={380} controls controlsList="nodownload" poster={e.thumbnail_url} className="d-block w-100 shadow-sm" src={e.media_url} alt={e.titulo} /> */}
-                                        </a> </div>
+                                            <div style={{ position: "relative" }}>
+                                                <img
+                                                    className="px-1 mb-2 instaPost"
+                                                    width={340}
+                                                    height={340}
+                                                    src={e.thumbnail_url}
+                                                    alt={title}
+                                                    style={{ objectFit: "cover" }}
+                                                />
+                                                <i className="fa fa-play-circle fa-4x text-white drop-shadow" style={{
+                                                    position: "absolute",
+                                                    top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+                                                    filter: 'drop-shadow(4px 7px 5px #212121)'
+                                                }}></i>
+
+                                            </div>
+
+                                        </a>
+                                        </div>
                                     }
                                     return (
                                         <div key={i} className="col "><a href={e.permalink} target="_blank" rel="noopener noreferrer">
@@ -75,8 +84,8 @@ function Blog({ data }) {
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div >
+            </section >
         </>
     );
 
