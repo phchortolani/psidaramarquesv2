@@ -44,9 +44,9 @@ export default function Home({ data }) {
       <LandingPage isMobile={isMobile} />
       <img src="/wave2.svg" />
       <AtendimentoOnline isMobile={isMobile} />
-      <img className="wave1Back" src="/wave1.svg" />
+      <img className="wave1Back p-0 m-0" src="/wave1.svg" />
       <Terapia isMobile={isMobile} />
-      <img src="/wave3.svg" />
+      <img style={{ transform: "translateY(-1px)" }} src="/wave3.svg" />
       <Sobre isMobile={isMobile} />
       <Pergunta isMobile={isMobile} />
       <Blog data={data} />
