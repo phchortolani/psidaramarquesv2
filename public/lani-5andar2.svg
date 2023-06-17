@@ -37,12 +37,12 @@
       <stop
          offset="0"
          stop-opacity="0.99609"
-         stop-color="#2780c2"
+         stopColor="#2780c2"
          id="stop37" />
       <stop
          offset="1"
          stop-opacity="0.99609"
-         stop-color="#03baa4"
+         stopColor="#03baa4"
          id="stop39" />
     </linearGradient>
   </defs>

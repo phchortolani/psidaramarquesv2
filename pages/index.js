@@ -8,6 +8,9 @@ import Pergunta from './src/components/pergunta/pergunta'
 import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Wave1 from './src/components/waves/Wave1'
+import Wave2 from './src/components/waves/Wave2'
+import Wave3 from './src/components/waves/Wave3'
 
 export async function getStaticProps(context) {
   let url = "https://graph.instagram.com/me/media?access_token=" +
@@ -28,10 +31,14 @@ export async function getStaticProps(context) {
 
 export default function Home({ data }) {
   const [isMobile, setIsMobile] = useState()
+  
   useEffect(() => {
+    
+
     setIsMobile(window.matchMedia("(max-width: 600px)").matches)
   }, [])
 
+ 
   return (
     <>
       <Head>
@@ -42,11 +49,11 @@ export default function Home({ data }) {
       </Head>
       <Navbar />
       <LandingPage isMobile={isMobile} />
-      <img src="/wave2.svg" />
+      <Wave2 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} />
       <AtendimentoOnline isMobile={isMobile} />
-      <img className="wave1Back p-0 m-0" src="/wave1.svg" />
+      <Wave1 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} />
       <Terapia isMobile={isMobile} />
-      <img style={{ transform: "translateY(-1px)" }} src="/wave3.svg" />
+      <Wave3 color1={"rgba(183, 175, 229, 1)"} />
       <Sobre isMobile={isMobile} />
       <Pergunta isMobile={isMobile} />
       <Blog data={data} />
@@ -107,13 +114,13 @@ export default function Home({ data }) {
         </div>
       </section>
       <hr className="mt-0 mb-0"></hr>
-      <div className="py-1" style={{ color: "black", textAlign: "center", background: "#ede7fb" }}>
+      {/*   <div className="py-1" style={{ color: "black", textAlign: "center", background: "#ede7fb" }}>
         <span className="text-muted small">
           <span className="text-center text-muted ">
             Powered by<br /><a href="https://lanisystems.vercel.app" target="_blank" rel="noopener noreferrer"> <img src="/lani-5andar1.svg" width={100}></img></a>
           </span>
         </span>
-      </div>
+      </div> */}
 
       {/*   <footer className="pb-2 mb-2" style={{ background: "#d0b3b5", color: "black", textAlign: "center" }}>
                     <hr className="mt-0"></hr>

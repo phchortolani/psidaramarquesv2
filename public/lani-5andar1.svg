@@ -36,12 +36,12 @@
        y2="0">
       <stop
          id="stop37"
-         stop-color="#2780c2"
+         stopColor="#2780c2"
          stop-opacity="0.99609"
          offset="0" />
       <stop
          id="stop39"
-         stop-color="#03baa4"
+         stopColor="#03baa4"
          stop-opacity="0.99609"
          offset="1" />
     </linearGradient>
