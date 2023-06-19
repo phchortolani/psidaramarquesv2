@@ -26,6 +26,12 @@ function Conf() {
     { name: "--atendimento-card-color", value: "#f9f6fe" }
   ]
 
+  function VoltarCores() {
+    data2.forEach(element => {
+      SalvarCores(element)
+    });
+    setCores(data2)
+  }
   function SaveColor(name, value) {
     SalvarCores({ name, value })
   }
@@ -45,6 +51,8 @@ function Conf() {
             gap: '1rem'
           }}>{x.name}: <input type="color" defaultValue={x.value}></input></div>
       })}
+      <hr />
+      <button type="button" className="btn btn-primary" onClick={() => VoltarCores()}>Redefinir</button>
 
     </div>
   </div >
