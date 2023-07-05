@@ -38,7 +38,6 @@ export default function Home({ data }) {
     setIsMobile(window.matchMedia("(max-width: 600px)").matches)
   }, [])
 
- 
   return (
     <>
       <Head>
