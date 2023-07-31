@@ -8,9 +8,9 @@ import Pergunta from './src/components/pergunta/pergunta'
 import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Wave1 from './src/components/waves/Wave1'
+/* import Wave1 from './src/components/waves/Wave1'
 import Wave2 from './src/components/waves/Wave2'
-import Wave3 from './src/components/waves/Wave3'
+import Wave3 from './src/components/waves/Wave3' */
 
 export async function getStaticProps(context) {
   let url = "https://graph.instagram.com/me/media?access_token=" +

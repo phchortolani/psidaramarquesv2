@@ -295,8 +295,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn-primary:hover {
-  background-color: #bab4e4;
-  border-color: #bab4e4;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .btn-primary:focus {
@@ -453,18 +453,23 @@ section#blog {
 }
 
 .accordion-button:not(.collapsed) {
-  color: #8175d1;
-  background-color: #9f90e0;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .accordion-body {
   padding: 1rem 1.25rem;
-  background: #eae3fa;
+  background: var(--tertiary-color);
+  outline: 0;
+}
+
+.accordion-button::after {
+  color: var(--primary-color) !important;
 }
 
 .accordion-button:focus {
   z-index: 3;
-  border-color: #6f65b6 !important;
+  border-color: var(--primary-color) !important;
   outline: 0;
   box-shadow: unset !important;
   /* box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%); */
