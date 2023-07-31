@@ -2,18 +2,35 @@ import Image from 'next/image'
 
 export default function LandingPage(props) {
 
+
+
     return (
-        <section id="homeSection" className="home container">
+        <section id="home_Section" className="home container">
 
             <div className="landingContent ">
 
                 <div className="titleLand">
-                    <h3>
+                    {/*   <h3>
 
                         Aprenda a <span className="text-primary">lidar com a ansiedade </span>  para uma vida mais leve!
+                    </h3> */}
+                    <h3>
+
+                        Aprenda a <b className="text-secondary">lidar com a ansiedade </b>  para uma vida mais leve!
                     </h3>
                 </div>
                 <div className="landingImgContent p-2">
+                    <Image
+                        style={{ borderRadius: '1rem' }}
+                        className='cover shadow'
+                        src="/land3.jpg"
+                        alt="Psicóloga Dara Marques"
+                        width={400}
+                        height={480}
+                        loading="lazy"
+                    />
+
+                    {/* 
                     {!props.isMobile ? <Image
                         src="/land4.png"
                         alt="Psicóloga Dara Marques"
@@ -28,7 +45,7 @@ export default function LandingPage(props) {
                         loading="lazy"
                     />
 
-                    }
+                    } */}
                     {/*      <img className="landImg" src="/land4.png" /> */}
                 </div>
                 <div className="descLand">
