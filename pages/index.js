@@ -31,9 +31,9 @@ export async function getStaticProps(context) {
 
 export default function Home({ data }) {
   const [isMobile, setIsMobile] = useState()
-  
+
   useEffect(() => {
-    
+
 
     setIsMobile(window.matchMedia("(max-width: 600px)").matches)
   }, [])
@@ -48,11 +48,11 @@ export default function Home({ data }) {
       </Head>
       <Navbar />
       <LandingPage isMobile={isMobile} />
-      <Wave2 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} />
+      {/*  <Wave2 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} /> */}
       <AtendimentoOnline isMobile={isMobile} />
-      <Wave1 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} />
+      {/* <Wave1 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} /> */}
       <Terapia isMobile={isMobile} />
-      <Wave3 color1={"rgba(183, 175, 229, 1)"} />
+      {/*  <Wave3 color1={"rgba(183, 175, 229, 1)"} /> */}
       <Sobre isMobile={isMobile} />
       <Pergunta isMobile={isMobile} />
       <Blog data={data} />

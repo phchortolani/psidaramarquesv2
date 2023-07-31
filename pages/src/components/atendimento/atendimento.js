@@ -4,7 +4,7 @@ export default function AtendimentoOnline() {
             <section id="Atendimento" className="">
                 <div className="container pb-5">
                     <div className="headerSection">
-                        <h2 className="titleSection py-3">Entenda as vantagens da terapia on-line</h2>
+                        <h2 className="titleSection py-4">Benefícios da terapia</h2>
                     </div>
                     <div className="atendimentoContent">
                         <div className="atendimentoCards">

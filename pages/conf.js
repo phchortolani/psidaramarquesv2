@@ -21,7 +21,7 @@ function Conf() {
     { name: "--primary-color", value: "#7f73d0" },
     { name: "--secondary-color", value: "#b7afe5" },
     { name: "--back-color", value: "#ffffff" },
-    { name: "--footer-color", value: "#ede7fb" },
+    { name: "--tertiary-color", value: "#ede7fb" },
     { name: "--atendimento-color", value: "#e9e3f9" },
     { name: "--atendimento-card-color", value: "#f9f6fe" }
   ]

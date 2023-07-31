@@ -9,7 +9,7 @@ export default function LandingPage(props) {
 
                 <div className="titleLand">
                     <h3>
-                        
+
                         Aprenda a <span className="text-primary">lidar com a ansiedade </span>  para uma vida mais leve!
                     </h3>
                 </div>

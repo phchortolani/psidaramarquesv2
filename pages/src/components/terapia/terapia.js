@@ -63,17 +63,24 @@ export default function Terapia(props) {
 
 
     return <>
-        <section id="terapia" className="pb-4">
-            <div className="container">
+        <section id="terapia" className="p-5 d-flex  align-items-center">
+            <div className="container p-3">
                 <div className="headerSection">
                     <h2 className="titleSection">Como a terapia pode me ajudar?</h2>
                 </div>
-                <div className="terapiaContent">
+                <div className="bgCardWhite d-flex flex-column gap-3 justify-content-center align-items-center shadow " style={{ fontSize: '1.1rem' }} >
+                    <p>As <b className="text-primary">primeiras sessões são muito importantes</b>, pois é nesse momento que vou conhecer você e, juntas,  <b className="text-primary">definiremos seus objetivos e metas</b> com a terapia.
+                        Caso haja alguma suspeita de  <b className="text-primary">psicopatologia</b>, será realizada uma  <b className="text-primary">avaliação para diagnóstico</b>, podendo ser necessário algumas sessões adicionais.</p>
+                    <p>Com base nos seus objetivos e diagnóstico, o tratamento será iniciado com foco em te ajudar a identificar seus pensamentos, sentimentos e comportamentos. Faremos mudanças de hábitos com base nas suas metas e necessidades específicas.</p>
+                    <p>Meu trabalho é focado em desenvolver sua flexibilidade psicológica, auxiliando no manejo de sentimentos, pensamentos e traumas, para que você possa ter uma vida com mais sentido, significado e foco no presente. Em caso de diagnóstico, <b className="text-primary">o tratamento será direcionado conforme suas necessidades específicas</b>.</p>
+                    <p>A terapia é totalmente individualizada e única para cada pessoa, respeitando suas demandas e dificuldades. O sigilo das sessões é garantido, seguindo o código de ética do psicólogo.</p>
+                    <p>Estou aqui para te apoiar nessa jornada de autoconhecimento e crescimento pessoal. Agende sua primeira sessão e vamos caminhar juntas rumo a uma vida mais plena e saudável!</p>
+                </div>
+                {/*  <div className="terapiaContent">
                     {psi}
                     {TCC}
                     {sintomas}
-
-                </div>
+                </div> */}
                 <div className="d-flex text-center justify-content-center mt-5">
                     <button className="btn-land bg-gradient btn btn-lg btn-primary btn-inverse p-4" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Entre em contato para mais informações</button>
                 </div>
