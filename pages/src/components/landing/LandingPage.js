@@ -14,30 +14,29 @@ export default function LandingPage(props) {
 
                         Aprenda a <span className="text-primary">lidar com a ansiedade </span>  para uma vida mais leve!
                     </h3> */}
-                    <h3>
-
-                        Aprenda a <b className="text-primary">lidar com a ansiedade </b>  para uma vida mais leve!
+                    <h3 className='text-primary'>
+                        Aprenda a <b className="titulo-primary">lidar com a ansiedade </b>  para uma vida mais leve!
                     </h3>
                 </div>
                 <div className="landingImgContent p-2">
                     {
                         props.isMobile && <Image
-                            style={{ borderRadius: '1rem' }}
-                            className='cover shadow'
-                            src="/land3.jpg"
+                        style={{ borderRadius: '100%' }}
+                            className='cover '
+                            src="/sobreImg.png"
                             alt="Psicóloga Dara Marques"
                             width={300}
-                            height={280}
+                            height={300}
                             loading="lazy"
                         />
                     }
                     {
                         !props.isMobile && <Image
-                            style={{ borderRadius: '1rem' }}
-                            className='cover shadow'
-                            src="/land3.jpg"
+                            style={{ borderRadius: '100%' }}
+                            className='cover'
+                            src="/sobreImg.png"
                             alt="Psicóloga Dara Marques"
-                            width={400}
+                            width={480}
                             height={480}
                             loading="lazy"
                         />

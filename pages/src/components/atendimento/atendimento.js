@@ -1,41 +1,42 @@
 export default function AtendimentoOnline() {
     return (
         <>
-            <section id="Atendimento" className="">
+            <section id="Atendimento" className="pt-5">
                 <div className="container pb-5">
                     <div className="headerSection">
-                        <h2 className="titleSection py-4">Benefícios da terapia</h2>
+                        <h2 className="titleSection py-6">Benefícios da terapia</h2>
                     </div>
                     <div className="atendimentoContent">
                         <div className="atendimentoCards">
-                            <h3 className="text-primary">Praticidade</h3>
-                            <p>Sem a necessidade de deslocamento até o consultório, você pode realizar suas sessões de onde estiver, basta ter uma conexão à internet e um dispositivo móvel ou computador.</p>
+                            <h4 className="text-primary">Terapia 100% online</h4>
+                            <p>A praticidade de receber atendimento no conforto de casa, sem deslocamentos, tornando o processo terapêutico mais acessível e flexível.</p>
                         </div>
                         <div className="atendimentoCards">
-                            <h3 className="text-primary">Comodidade</h3>
-                            <p>Realizar terapia no conforto da própria casa ou em outro local de sua preferência pode ser muito mais acolhedor e confortável.</p>
+                            <h4 className="text-primary">Baseado em evidências</h4>
+                            <p>A Terapia Cognitivo-Comportamental (TCC) é respaldada por pesquisas científicas comprovadas, garantindo sua eficácia no tratamento de diversas questões psicológicas.</p>
                         </div>
                         <div className="atendimentoCards">
-                            <h3 className="text-primary">Sigilo</h3>
-                            <p>As sessões on-line são tão confidenciais quanto as sessões presenciais, garantindo que suas informações pessoais e terapêuticas permaneçam seguras.</p>
+                            <h4 className="text-primary">Tratamento amplo</h4>
+                            <p>Além de abordar transtornos psicológicos como transtornos de ansiedade, depressão, a TCC atende a outras demandas, como mudança de hábitos, autoestima e relacionamentos.</p>
                         </div>
                         <div className="atendimentoCards">
-                            <h3 className="text-primary">Horários flexíveis</h3>
-                            <p>Com a possibilidade de agendar sessões em horários que sejam convenientes para você, é possível conciliar terapia com sua rotina diária.</p>
+                            <h4 className="text-primary">Individualizado</h4>
+                            <p> O foco na individualidade do paciente permite um tratamento personalizado, adaptado aos objetivos e necessidades específicas de cada pessoa.</p>
                         </div>
-                        <div className="atendimentoCards">
-                            <h3 className="text-primary">Mesma qualidade</h3>
+                        {/*      <div className="atendimentoCards">
+                            <h4 className="text-primary">Mesma qualidade</h4>
                             <p>Não há diferença na qualidade da terapia entre as sessões on-line e presenciais. O servico será prestado com qualidade independente da demanda ou questão levada pelo paciente.</p>
                         </div>
                         <div className="atendimentoCards">
-                            <h3 className="text-primary">Vínculo terapêutico</h3>
+                            <h4 className="text-primary">Vínculo terapêutico</h4>
                             <p>O vínculo terapêutico é essencial em qualquer tipo de terapia, e isso não muda na terapia on-line.</p>
 
-                        </div>
+                        </div> */}
                     </div>
+
                 </div>
                 <div className="d-flex text-center justify-content-center pb-5">
-                    <button className="btn-land bg-gradient btn btn-lg btn-primary " onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Tire suas dúvidas</button>
+                    <button className="btn-land bg-gradient btn btn-lg btn-primary " onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Entrar em contato</button>
                 </div>
             </section>
         </>)

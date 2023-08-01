@@ -5,6 +5,7 @@
   --tertiary-color: #ede7fb;
   --atendimento-color: #e9e3f9;
   --atendimento-card-color: #f9f6fe;
+  --titulo-primary: #987965;
   /*  --primary-color: #7f73d0;
   --secondary-color: #b7afe5;
   --back-color: #fff;
@@ -23,6 +24,24 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+}
+
+.text-atendimento-card-color {
+  color: var(--atendimento-card-color);
+}
+
+.titulo-primary {
+  color: var(--titulo-primary);
+}
+
+.text-atendimento-color {
+  color: var(--atendimento-color);
+}
+
+.cover {
+  object-fit: cover;
+  object-position: top;
+  border: solid 10px var(--atendimento-card-color);
 }
 
 body {
@@ -193,10 +212,6 @@ body::-webkit-scrollbar-thumb {
   text-align: left;
   margin: 0 auto;
   align-items: center;
-}
-
-.cover {
-  object-fit: cover;
 }
 
 .text-secondary {
@@ -388,8 +403,13 @@ a:hover {
 .atendimentoCards {
   text-align: left;
   /* display: grid; */
-  padding: 45px 45px;
+  padding: 1.5rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center!important;
+  
   position: relative;
   overflow: hidden;
   background-color: var(--atendimento-card-color);
@@ -414,11 +434,11 @@ a:hover {
 
 .atendimentoContent {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.9fr 0.9fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   text-align: center;
   margin: 0 auto;
-  gap: 3em;
+  gap: 1.5rem;
 }
 
 #terapia {
@@ -429,7 +449,6 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-
 
 #terapia .titleSection {
   color: white;
@@ -559,8 +578,8 @@ section.terapia {
 }
 
 #Atendimento {
-  background: var(--atendimento-color) !important;
-  min-height: calc(100vh);
+  /*  background: var(--atendimento-color) !important; */
+  min-height: calc(20vh);
   display: flex;
   flex-direction: column;
   align-items: center;
