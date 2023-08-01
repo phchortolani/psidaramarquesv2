@@ -147,11 +147,11 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
-.bgCardWhite {
+.bgCardTerapia {
   padding: 1.5rem 1.5em;
   border-radius: 20px;
   margin: 5px;
-  background: #ffffff;
+  background: white;
   height: 100%;
 }
 
@@ -308,15 +308,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .btn-primary:focus {
   color: var(--back-color);
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.25rem rgb(186 180 228 / 50%);
+  box-shadow: 0 0 0 0.25rem var(--secondary-color);
 }
 
 .text-primary {
@@ -338,7 +338,7 @@ body::-webkit-scrollbar-thumb {
 .btn-primary.active:focus,
 .btn-primary:active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgb(127 115 208);
+  box-shadow: 0 0 0 0.25rem var(--primary-color);
 }
 
 .navbar-nav {
@@ -422,7 +422,7 @@ a:hover {
 }
 
 #terapia {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   min-height: calc(100vh);
   display: flex;
   flex-direction: column;
