@@ -15,7 +15,7 @@ export default function LandingPage(props) {
                         Aprenda a <b className="titulo-primary">lidar com a ansiedade </b>  para uma vida mais leve!
                     </h3> */}
                     <h3 className='text-primary'>
-                        Terapia para <b className="titulo-primary">ansiedade</b>
+                        Terapia para <b className="titulo-primary">Ansiedade</b>
                     </h3>
                     <h5 className='text-primary'>
                         Aprenda a lidar com a ansiedade   para uma vida mais leve!
