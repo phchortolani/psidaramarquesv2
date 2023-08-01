@@ -1,9 +1,6 @@
 import Image from 'next/image'
 
 export default function LandingPage(props) {
-
-
-
     return (
         <section id="home_Section" className="home container">
 
@@ -14,14 +11,20 @@ export default function LandingPage(props) {
 
                         Aprenda a <span className="text-primary">lidar com a ansiedade </span>  para uma vida mais leve!
                     </h3> */}
-                    <h3 className='text-primary'>
+                    {/*  <h3 className='text-primary'>
                         Aprenda a <b className="titulo-primary">lidar com a ansiedade </b>  para uma vida mais leve!
+                    </h3> */}
+                    <h3 className='text-primary'>
+                        Terapia para <b className="titulo-primary">ansiedade</b>
                     </h3>
+                    <h5 className='text-primary'>
+                        Aprenda a lidar com a ansiedade   para uma vida mais leve!
+                    </h5>
                 </div>
                 <div className="landingImgContent p-2">
                     {
                         props.isMobile && <Image
-                        style={{ borderRadius: '100%' }}
+                            style={{ borderRadius: '100%' }}
                             className='cover '
                             src="/sobreImg.png"
                             alt="Psicóloga Dara Marques"
@@ -60,17 +63,27 @@ export default function LandingPage(props) {
                     } */}
                     {/*      <img className="landImg" src="/land4.png" /> */}
                 </div>
-                <div className="descLand pb-4">
-                    <h4 className="pt-4">
+                <div className="descLand ">
+                    {/*  <h4 className="pt-4">
                         Olá, sou a <b className="text-primary">Dara Marques</b>, psicóloga.
-                    </h4>
-                    <h4 className="text-primary">
-                        Vamos conversar?
-                    </h4>
+                    </h4> */}
 
-                    <div className="btnsLand ">
+                    <div className="text-primary">
+                        <h3> Dara Marques</h3>
+
+                        <h6>
+                            Psicóloga e Psicoterapeuta
+                        </h6>
+                        <h6>
+                            CRP 06/164999
+                        </h6>
+                        {/*    <b className="text-primary">Dara Marques</b>, psicóloga.
+                        Vamos conversar? */}
+                    </div>
+
+                    <div className="btnsLand py-2">
                         {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
-                        <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende uma consulta</button>
+                        <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
                     </div>
                 </div>
             </div>

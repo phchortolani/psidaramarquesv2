@@ -24,7 +24,7 @@ export default function Sobre(props) {
                         height={367}
                     />
                     } */}
-                    <img className="sobreImg" alt="Psicóloga Dara Marques" src="/sobreImg.png"></img>
+                    <img className="sobreImg" alt="Psicóloga Dara Marques" src="/land3.jpg"></img>
                     {/*   <cite className="text-muted pt-4 small">Dara Macedo Marques Hortolani - CRP 06/164999</cite> */}
                 </div>
 

@@ -65,53 +65,53 @@ export default function Home({ data }) {
       </a> */}
 
       <section id="Contato">
-        <div id="footer" className="footer">
+        <div id="footer" className="footer text-center">
           <div className="container">
-            <div className="d-flex justify-content-around">
-              <div>
-                <div className='mb-2'>  <Image
+            <div className="d-flex flex-column justify-content-around align-items-center">
+              {/*  <div>  <Image
                   src="/soLogo2.png"
                   alt="Logo Dara Marques"
                   width={86}
                   height={65}
                   className={"logoImg"}
                 />
-                </div>
-                <h3 className='text-primary'><b>Informações</b></h3>
-                <ul style={{ listStyle: "none" }} className='p-1'>
-                  <li className='mb-2'>
-                    <span>
-                      <i aria-hidden="true" className="fas fa-mobile-alt"></i>
-                      <b> +55 (11) 97849-3885</b>
-                    </span>
-                  </li>
-                  <li className='mb-2'>
-                    <a href="https://www.instagram.com/psidaramarques/" target="_blank" rel="noopener noreferrer">
-                      <span>
-                        <i aria-hidden="true" className="fab fa-instagram"></i>
-                      </span>
-                      <b> @psidaramarques</b>
-                    </a>
-                  </li>
-                  <li className='mb-2'>
-                    <a href="https://www.facebook.com/psidaramarques" target="_blank" rel="noopener noreferrer">
-                      <span >
-                        <i aria-hidden="true" className="fab fa-facebook-square"></i></span>
-                      <b> @psidaramarques</b>
-                    </a>
-                  </li>
-                  <li className='mb-2'>
-                    <span>
-                      <i aria-hidden="true" className="far fa-envelope"></i>
-                    </span>
-                    <b> psi.daramarques@gmail.com</b>
-                  </li>
-                </ul>
+                </div> */}
+              <div className='text-center'>
+                <h3 className='text-primary'><b>Contato</b></h3>
               </div>
+
+              <ul style={{ listStyle: "none", alignItems: 'cen' }} className='p-1'>
+                <li>
+                  <div >
+                    <div>
+                      <b>Psicóloga Dara Marques</b>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div >
+                    <div>
+                      <b>CRP 06/164999</b>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className='d-flex justify-content-between gap-2'>
+                    <div>
+                      <i aria-hidden="true" className="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>
+                      <b> +55 (11) 97849-3885</b>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+
             </div>
           </div>
         </div>
-      </section>
+      </section >
       <hr className="mt-0 mb-0"></hr>
       {/*   <div className="py-1" style={{ color: "black", textAlign: "center", background: "#ede7fb" }}>
         <span className="text-muted small">
