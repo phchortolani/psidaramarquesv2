@@ -44,7 +44,7 @@ export default function Sobre(props) {
 
                         <div className="btnsLand ">
                             {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
-                            <button className="btn-land btn bg-gradient btn-primary " onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende uma consulta</button>
+                            <button className="btn-land btn bg-gradient btn-primary " onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
                         </div>
 
                     </div>

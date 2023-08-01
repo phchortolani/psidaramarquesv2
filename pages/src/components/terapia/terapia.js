@@ -76,7 +76,7 @@ export default function Terapia(props) {
                     <p>A terapia é totalmente individualizada e única para cada pessoa, respeitando suas demandas e dificuldades. O sigilo das sessões é garantido, seguindo o código de ética do psicólogo.</p>
                     <p>Estou aqui para te apoiar nessa jornada de autoconhecimento e crescimento pessoal. Agende sua primeira sessão e vamos caminhar juntas rumo a uma vida mais plena e saudável!</p>
                     <div className="d-flex text-center justify-content-center mt-5">
-                        <button className="btn-land bg-gradient btn btn-lg btn-primary p-4" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Entre em contato para mais informações</button>
+                        <button className="btn-land bg-gradient btn btn-lg btn-primary p-4" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
                     </div>
                 </div>
                 {/*  <div className="terapiaContent">
