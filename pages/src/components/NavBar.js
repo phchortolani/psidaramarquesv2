@@ -45,7 +45,7 @@ export default function NavBar(props) {
     }, [])
     return <>
 
-        <div id="header" className={"header navbar navbar-light navbar-default navbar-expand-lg navbar-fixed-top navbar-sm " + (navPosition.position > 100 ? "headershadow" : "")}>
+        <div id="header" className={"header grow-in navbar navbar-light navbar-default navbar-expand-lg navbar-fixed-top navbar-sm " + (navPosition.position > 100 ? "headershadow" : "")}>
 
             <div className="container">
                 {/*    <div className="d-none d-md-block ">
