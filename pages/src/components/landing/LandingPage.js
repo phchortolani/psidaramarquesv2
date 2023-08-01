@@ -70,15 +70,12 @@ export default function LandingPage(props) {
 
                     <div className="text-primary">
                         <h3> Dara Marques</h3>
-
                         <h6>
                             Psicóloga e Psicoterapeuta
                         </h6>
                         <h6>
                             CRP 06/164999
                         </h6>
-                        {/*    <b className="text-primary">Dara Marques</b>, psicóloga.
-                        Vamos conversar? */}
                     </div>
 
                     <div className="btnsLand py-2">
