@@ -62,8 +62,8 @@ export default function LandingPage(props) {
                     {/*      <img className="landImg" src="/land4.png" /> */}
                 </div>
                 <div className="descLand pb-4">
-                    <h4 className="text-muted pt-4">
-                        Olá, sou a <b className="text-black">Dara Marques</b>, psicóloga.
+                    <h4 className="pt-4">
+                        Olá, sou a <b className="text-primary">Dara Marques</b>, psicóloga.
                     </h4>
                     <h4 className="text-primary">
                         Vamos conversar?

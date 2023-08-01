@@ -430,6 +430,7 @@ a:hover {
   justify-content: center;
 }
 
+
 #terapia .titleSection {
   color: white;
 }
@@ -525,6 +526,7 @@ section.terapia {
 .titleSection {
   color: var(--primary-color);
   font-size: 2.2rem;
+  font-weight: 800;
 }
 
 /**/
@@ -659,6 +661,7 @@ section.terapia {
   .titleSection {
     color: var(--primary-color);
     font-size: 1.9rem;
+    font-weight: 800;
   }
 
   .terapiaList {
@@ -734,5 +737,6 @@ section.terapia {
   .titleSection {
     color: var(--primary-color);
     font-size: 1.9rem;
+    font-weight: 800;
   }
 }
