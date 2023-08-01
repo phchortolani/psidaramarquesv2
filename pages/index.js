@@ -65,7 +65,7 @@ export default function Home({ data }) {
       </a> */}
 
       <section id="Contato">
-        <div id="footer" className="footer text-center">
+        <div id="footer" className="footer text-center pt-5">
           <div className="container">
             <div className="d-flex flex-column justify-content-around align-items-center">
               {/*  <div>  <Image
