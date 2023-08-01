@@ -6,7 +6,7 @@ export default function LandingPage(props) {
 
             <div className="landingContent ">
 
-                <div className="titleLand">
+                <div className="titleLand push-left">
                     {/*   <h3>
 
                         Aprenda a <span className="text-primary">lidar com a ansiedade </span>  para uma vida mais leve!
@@ -15,13 +15,13 @@ export default function LandingPage(props) {
                         Aprenda a <b className="titulo-primary">lidar com a ansiedade </b>  para uma vida mais leve!
                     </h3> */}
                     <h3 className='text-primary'>
-                        Terapia para <b className="titulo-primary">Ansiedade</b>
+                        Terapia para <b className="titulo-primary grow-in">Ansiedade</b>
                     </h3>
                     <h5 className='text-primary'>
-                    Experimente um tratamento especializado e comprovado para ansiedade!
+                        Experimente um tratamento especializado e comprovado para ansiedade!
                     </h5>
                 </div>
-                <div className="landingImgContent p-2">
+                <div className="landingImgContent p-2 fade-in grow-in">
                     {
                         props.isMobile && <Image
                             style={{ borderRadius: '100%' }}
@@ -68,7 +68,7 @@ export default function LandingPage(props) {
                         Olá, sou a <b className="text-primary">Dara Marques</b>, psicóloga.
                     </h4> */}
 
-                    <div className="text-primary">
+                    <div className="text-primary push-up">
                         <h3> Dara Marques</h3>
                         <h6>
                             Psicóloga e Psicoterapeuta
@@ -78,7 +78,7 @@ export default function LandingPage(props) {
                         </h6>
                     </div>
 
-                    <div className="btnsLand py-2">
+                    <div className="btnsLand py-2 fade-in">
                         {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
                         <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
                     </div>

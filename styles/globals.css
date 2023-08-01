@@ -84,7 +84,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fade-in {
-  animation: fade-in 2s ease-in-out;
+  animation: fade-in 1s ease-in-out;
+}
+
+.push-up {
+  animation: push-in 1s ease-in-out;
+}
+
+.push-left {
+  animation: push-left 1s ease-in-out;
+}
+
+.grow-in {
+  animation: grow-in 1.4s ease-in-out;
+}
+
+@keyframes grow-in {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 @keyframes pulse {
@@ -114,6 +137,31 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
+
+@keyframes push-in {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes push-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .instaPost {
   transition: 400ms;
@@ -632,7 +680,12 @@ section.terapia {
   }
 
   .titleLand > h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    padding: 0 1em;
+  }
+
+  .titleLand > h5 {
+    font-size: 1rem;
     padding: 0 1em;
   }
 
@@ -713,7 +766,7 @@ section.terapia {
   }
 
   .titleLand > h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   h4 {

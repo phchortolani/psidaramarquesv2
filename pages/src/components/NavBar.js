@@ -60,8 +60,8 @@ export default function NavBar(props) {
                             <Image
                                 src="/soLogo3.png"
                                 alt="Logo Dara Marques"
-                                width={82}
-                                height={60}
+                                width={72}
+                                height={50}
                                 className={"logoImg " + (navPosition.position > 100 ? "rolldown" : "")}
                             />
 
