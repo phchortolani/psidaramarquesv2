@@ -33,8 +33,6 @@ export default function Home({ data }) {
   const [isMobile, setIsMobile] = useState()
 
   useEffect(() => {
-
-
     setIsMobile(window.matchMedia("(max-width: 600px)").matches)
   }, [])
 
@@ -80,7 +78,7 @@ export default function Home({ data }) {
                 <h3 className='text-primary'><b>Contato</b></h3>
               </div>
 
-              <ul style={{ listStyle: "none", alignItems: 'cen' }} className='p-1'>
+              <ul style={{ listStyle: "none"}} className='p-1'>
                 <li>
                   <div >
                     <div>
