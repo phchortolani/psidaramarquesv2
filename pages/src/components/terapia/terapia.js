@@ -1,3 +1,5 @@
+import ReactPlayer from 'react-player';
+
 export default function Terapia(props) {
 
     const sintomas = <div className="text-white bgCardRoxo shadow">
@@ -63,12 +65,18 @@ export default function Terapia(props) {
 
 
     return <>
-        <section id="terapia" className="p-5 d-flex  align-items-center">
-            <div className="container p-3">
+        <section id="terapia" className="align-items-center ">
+            <div className="container p-5 justify-content-center d-flex flex-column vh-100">
                 <div className="headerSection">
                     <h2 className="titleSection">Como a terapia pode me ajudar?</h2>
                 </div>
-                <div className="bgCardTerapia d-flex flex-column gap-3 justify-content-center align-items-center shadow " style={{ fontSize: '1.1rem' }} >
+                <ReactPlayer
+                    url={'https://youtu.be/ROureOTjP_s'}
+                    controls={true}
+                    width={'100%'}
+                    height={'100%'}
+                />
+                {/*        <div className="bgCardTerapia d-flex flex-column gap-3 justify-content-center align-items-center shadow " style={{ fontSize: '1.1rem' }} >
                     <p>As <b className="text-primary">primeiras sessões são muito importantes</b>, pois é nesse momento que vou conhecer você e, juntas,  <b className="text-primary">definiremos seus objetivos e metas</b> com a terapia.
                         Caso haja alguma suspeita de  <b className="text-primary">psicopatologia</b>, será realizada uma  <b className="text-primary">avaliação para diagnóstico</b>, podendo ser necessário algumas sessões adicionais.</p>
                     <p>Com base nos seus objetivos e diagnóstico, o tratamento será iniciado com foco em te ajudar a identificar seus pensamentos, sentimentos e comportamentos. Faremos mudanças de hábitos com base nas suas metas e necessidades específicas.</p>
@@ -78,7 +86,7 @@ export default function Terapia(props) {
                     <div className="d-flex text-center justify-content-center mt-5">
                         <button className="btn-land bg-gradient btn btn-lg btn-primary p-4" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
                     </div>
-                </div>
+                </div> */}
                 {/*  <div className="terapiaContent">
                     {psi}
                     {TCC}
