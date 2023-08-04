@@ -78,10 +78,10 @@ export default function LandingPage(props) {
                         </h6>
                     </div>
 
-                    <div className="btnsLand  fade-in">
-                        {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
+                    <div className="btnsLand fade-in">
                         <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
-                    </div>
+{/*                         <button className="btn btn-lg btn-primary btn-inverse">Saiba Mais</button>
+ */}                    </div>
                 </div>
             </div>
         </section>
