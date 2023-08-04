@@ -488,12 +488,10 @@ a:hover {
 
 #terapia {
   background-color: var(--primary-color);
-  height: 100vh;
+  height: max-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap:4rem;
-  justify-content: center;
+  padding: 4rem 0;
 }
 
 #terapia .titleSection {
@@ -653,8 +651,9 @@ section.terapia {
   }
 
   #terapia {
-    padding: 0px !important;
+   
     width: 100%;
+    padding: 4rem 0;
   }
 
   .terapiaContent {

@@ -15,7 +15,7 @@ export default function LandingPage(props) {
                         Aprenda a <b className="titulo-primary">lidar com a ansiedade </b>  para uma vida mais leve!
                     </h3> */}
                     <h3 className='text-primary'>
-                        Terapia para <b className="titulo-primary">Ansiedade</b>
+                        A  <b className="titulo-primary">ansiedade</b> não precisa dominar a sua vida
                     </h3>
                     <h5 className='text-primary'>
                         Experimente um tratamento especializado e comprovado para ansiedade!
@@ -78,7 +78,7 @@ export default function LandingPage(props) {
                         </h6>
                     </div>
 
-                    <div className="btnsLand py-2 fade-in">
+                    <div className="btnsLand  fade-in">
                         {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
                         <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
                     </div>
