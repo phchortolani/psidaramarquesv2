@@ -1,6 +1,20 @@
+'use client'
 import Image from 'next/image'
+import { useRouter } from "next/navigation"
 
 export default function LandingPage(props) {
+    const router = useRouter()
+    function send_event(event, url) {
+        const GoogleTagAnalyticsFunction = window['gtag'];
+       
+        GoogleTagAnalyticsFunction('event', 'conversion',
+            {
+                send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/zuxBCNiBss8DEJWRxtso',
+                event_callback: router.push(url),
+                event_label: event
+            })
+    }
+
     return (
         <section id="home_Section" className="home container">
 
@@ -79,8 +93,8 @@ export default function LandingPage(props) {
                     </div>
 
                     <div className="btnsLand fade-in">
-                        <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Agende sua sessão</button>
-{/*                         <button className="btn btn-lg btn-primary btn-inverse">Saiba Mais</button>
+                        <button className="btn-land bg-gradient btn btn-lg btn-primary pulse" onClick={() => send_event('click_landing', 'https://api.whatsapp.com/send?phone=5511978493885')}>Agende sua sessão</button>
+                        {/*                         <button className="btn btn-lg btn-primary btn-inverse">Saiba Mais</button>
  */}                    </div>
                 </div>
             </div>
