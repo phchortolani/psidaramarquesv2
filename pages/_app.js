@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import '../styles/globals.css'
 import { ObterCores } from '../services/confService';
+import Script from 'next/script'
+
 
 export default function App({ Component, pageProps }) {
   const [cssLoad, setCssLoad] = useState(false);
@@ -34,6 +36,16 @@ export default function App({ Component, pageProps }) {
     if (!cssLoad && cores && cores.length > 0) setCssLoad(true)
   }, [cores])
   return <>
+    <Script id="google-analytics" >
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+      `}
+
+    </Script>
     {cssLoad && cores && cores.length > 0 && <Component {...pageProps} />}
   </>
 }
