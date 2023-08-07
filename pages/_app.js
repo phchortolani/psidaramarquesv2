@@ -3,7 +3,7 @@ import '../styles/globals.css'
 import { ObterCores } from '../services/confService';
 import Script from 'next/script'
 import Head from 'next/head';
-import { GoogleContextProvider } from './src/contexts/GoogleTagContext';
+import GoogleContextProvider from './src/contexts/GoogleTagContext';
 
 
 export default function App({ Component, pageProps }) {
@@ -51,6 +51,6 @@ export default function App({ Component, pageProps }) {
       `}
 
     </Script>
-    {cssLoad && cores && cores.length > 0 && <GoogleContextProvider><Component {...pageProps} /></GoogleContextProvider> }
+    {cssLoad && cores && cores.length > 0 && <GoogleContextProvider><Component {...pageProps} /></GoogleContextProvider>}
   </>
 }

@@ -1,11 +1,9 @@
 'use client'
-import { useRouter } from "next/navigation"
 import React from "react"
 
 export const GoogleContext = React.createContext({})
 
-export function GoogleContextProvider({ children }) {
-    const router = useRouter()
+export default function GoogleContextProvider({ children }) {
 
     function send_event(event, url) {
         const GoogleTagAnalyticsFunction = window['gtag'];
