@@ -1,4 +1,5 @@
 import HTMLReactParser from 'html-react-parser'
+import CallToActionButton from '../buttons/callToAction'
 
 export default function PerguntasFrequentes() {
     const peguntas = [
@@ -54,7 +55,10 @@ export default function PerguntasFrequentes() {
                                 </h2>
                                 <div id={"flush-collapse" + (i)} className="accordion-collapse collapse" aria-labelledby={"flush-heading" + (i)} data-bs-parent="#acPerguntas">
                                     <div className="accordion-body"> {HTMLReactParser(e.resposta)}
-                                        <br /><br /> <a className='btn-land bg-gradient btn-primary btn-inverse' target="_blank" rel="noopener noreferrer" href='https://api.whatsapp.com/send?phone=5511978493885'>Agende sua sessão</a>
+                                        <br /><br />
+                                        <CallToActionButton event={'click_pergunta_' + i}>
+                                            <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua sessão</button>
+                                        </CallToActionButton>
                                     </div>
                                 </div>
                             </div>

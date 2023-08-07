@@ -1,3 +1,5 @@
+import CallToActionButton from "../buttons/callToAction";
+
 export default function AtendimentoOnline() {
     return (
         <>
@@ -36,7 +38,9 @@ export default function AtendimentoOnline() {
 
                 </div>
                 <div className="d-flex text-center justify-content-center pb-5">
-                    <button className="btn-land bg-gradient btn btn-lg btn-primary " onClick={() => (window.open('https://api.whatsapp.com/send?phone=5511978493885', "_blank"))}>Entrar em contato</button>
+                    <CallToActionButton event={'click_beneficios_terapia'}>
+                        <button type="button" className="btn-land bg-gradient btn btn-lg btn-primary ">Entrar em contato</button>
+                    </CallToActionButton>
                 </div>
             </section>
         </>)
