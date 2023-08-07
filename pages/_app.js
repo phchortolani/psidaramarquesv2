@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import '../styles/globals.css'
 import { ObterCores } from '../services/confService';
 import Script from 'next/script'
+import Head from 'next/head';
 
 
 export default function App({ Component, pageProps }) {
@@ -36,6 +37,9 @@ export default function App({ Component, pageProps }) {
     if (!cssLoad && cores && cores.length > 0) setCssLoad(true)
   }, [cores])
   return <>
+    <Head>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+    </Head>
     <Script id="google-analytics" >
       {`
         window.dataLayer = window.dataLayer || [];
