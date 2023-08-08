@@ -14,7 +14,7 @@ export default function GoogleContextProvider({ children }) {
                 event_label: event
             })
         GoogleTagAnalyticsFunction('event', 'conversion', {
-            send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/aS_8CIaE2c4YEJWRxtso'
+            send_to: process.env.NEXT_PUBLIC_GOOGLE_ADS + '/aS_8CIaE2c4YEJWRxtso'
         });
     }
 
