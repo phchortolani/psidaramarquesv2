@@ -4,9 +4,9 @@ import React from "react"
 export const GoogleContext = React.createContext({})
 
 export default function GoogleContextProvider({ children }) {
+    const GoogleTagAnalyticsFunction = window['gtag'];
 
     function send_event(event, url) {
-        const GoogleTagAnalyticsFunction = window['gtag'];
         GoogleTagAnalyticsFunction('event', 'conversion',
             {
                 send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/w--rCNGju80YEKyjnocq',
@@ -15,7 +15,15 @@ export default function GoogleContextProvider({ children }) {
             })
     }
 
-    return <GoogleContext.Provider value={{ send_event }}>
+    function send_track(event) {
+        GoogleTagAnalyticsFunction('event', event,
+            {
+                send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/w--rCNGju80YEKyjnocq',
+                event_label: event
+            })
+    }
+
+    return <GoogleContext.Provider value={{ send_event, send_track }}>
         {children}
     </GoogleContext.Provider>
 }

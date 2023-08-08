@@ -48,7 +48,6 @@ export default function App({ Component, pageProps }) {
         gtag('js', new Date());
 
         gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-        
       `}
 
     </Script>

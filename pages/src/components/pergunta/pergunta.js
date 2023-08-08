@@ -49,14 +49,16 @@ export default function PerguntasFrequentes() {
                         {peguntas.map((e, i) => {
                             return <div key={i} className="accordion-item">
                                 <h2 className="accordion-header" id={"flush-heading" + (i)}>
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse" + (i)} aria-expanded="false" aria-controls={"flush-collapse" + (i)}>
-                                        {HTMLReactParser("<span class='text-white'>" + e.pergunta + "</span>")}
-                                    </button>
+                                    <CallToActionButton event={('expandiu_pergunta_' + (i + 1))} redirect={false}>
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse" + (i)} aria-expanded="false" aria-controls={"flush-collapse" + (i)}>
+                                            {HTMLReactParser("<span class='text-white'>" + e.pergunta + "</span>")}
+                                        </button>
+                                    </CallToActionButton>
                                 </h2>
                                 <div id={"flush-collapse" + (i)} className="accordion-collapse collapse" aria-labelledby={"flush-heading" + (i)} data-bs-parent="#acPerguntas">
                                     <div className="accordion-body"> {HTMLReactParser(e.resposta)}
                                         <br /><br />
-                                        <CallToActionButton event={'click_pergunta_' + i}>
+                                        <CallToActionButton event={'click_pergunta_' + (i + 1)}>
                                             <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua sessão</button>
                                         </CallToActionButton>
                                     </div>

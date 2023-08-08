@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { GoogleContext } from "../contexts/GoogleTagContext"
+import CallToActionButton from "./buttons/callToAction"
 let atendimentoTop, terapiaTop, sobreTop, perguntasTop, contatoTop
 export default function NavBar(props) {
     const [navPosition, setNavPosition] = useState(0)
@@ -102,11 +104,15 @@ export default function NavBar(props) {
                 </div>
             </div>
         </div>
-        {navPosition.position > 100 && <a href="https://wa.me/message/OQPASIZH7O75G1" className="fade-in " target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
-            <div className='whats shadow pulse'>
-                <i className="fab fa-whatsapp fa-3x text-white"></i>
-            </div>
-        </a>}
+
+
+        {navPosition.position > 100 && <CallToActionButton event={'click_btn_whatsapp'}>
+            <span className="fade-in " target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999', cursor: 'pointer' }}>
+                <div className='whats shadow pulse'>
+                    <i className="fab fa-whatsapp fa-3x text-white"></i>
+                </div>
+            </span>
+        </CallToActionButton>}
 
     </>
 }
