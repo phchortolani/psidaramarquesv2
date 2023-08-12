@@ -1,20 +1,8 @@
-'use client'
 import Image from 'next/image'
-import { useRouter } from "next/navigation"
 import CallToActionButton from '../buttons/callToAction';
 
 export default function LandingPage(props) {
-    const router = useRouter()
-    function send_event(event, url) {
-        const GoogleTagAnalyticsFunction = window['gtag'];
-
-        GoogleTagAnalyticsFunction('event', 'conversion',
-            {
-                send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/zuxBCNiBss8DEJWRxtso',
-                event_callback: router.push(url),
-                event_label: event
-            })
-    }
+  
 
     return (
         <section id="home_Section" className="home container">
@@ -94,7 +82,7 @@ export default function LandingPage(props) {
                     </div>
 
                     <div className="btnsLand fade-in">
-                        <CallToActionButton event={'click_landingPage'}>
+                        <CallToActionButton event={'conversion_landingPage'}>
                             <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua sessão</button>
                         </CallToActionButton>
 

@@ -106,7 +106,7 @@ export default function NavBar(props) {
         </div>
 
 
-        {navPosition.position > 100 && <CallToActionButton event={'click_btn_whatsapp'}>
+        {navPosition.position > 100 && <CallToActionButton event={'conversion_btn_whatsapp'}>
             <span className="fade-in " target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999', cursor: 'pointer' }}>
                 <div className='whats shadow pulse'>
                     <i className="fab fa-whatsapp fa-3x text-white"></i>

@@ -7,7 +7,7 @@ export default function GoogleContextProvider({ children }) {
     const GoogleTagAnalyticsFunction = window['gtag'];
 
     function send_event(event, url) {
-        GoogleTagAnalyticsFunction('event', 'conversion',
+        GoogleTagAnalyticsFunction('event', event,
             {
                 send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/w--rCNGju80YEKyjnocq',
                 event_callback: window.open(url, '_blank'),
