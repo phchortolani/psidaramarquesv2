@@ -80,7 +80,6 @@ export default function LandingPage(props) {
                             CRP 06/164999
                         </h6>
                     </div>
-
                     <div className="btnsLand fade-in">
                         <CallToActionButton event={'conversion_landingPage'}>
                             <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua sessão</button>
