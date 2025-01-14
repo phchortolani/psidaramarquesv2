@@ -177,8 +177,8 @@ const LandingPage = () => {
                   <h2 style={styles.sectionTitle}>Processo Terapêutico</h2>
                   <div style={styles.processGrid}>
                     <ProcessStep number="1">
-                      Usamos as primeiras sessões para nos conhecermos melhor, identificar os principais
-                      problemas a serem tratados na terapia e traçar objetivos.
+                      Usamos as primeiras sessões para nos conhecermos melhor, <b>identificar os principais
+                        problemas</b> a serem tratados na terapia e <b>traçar objetivos</b>.
                     </ProcessStep>
 
                     <ProcessStep number="2">
@@ -201,28 +201,28 @@ const LandingPage = () => {
                   <div style={{ textAlign: 'left' }}>
                     <h2 style={styles.sectionTitle}>O que está incluso:</h2>
                     <Benefit>
-                      Sessões semanais de 50 minutos, agendadas nos dias e horários combinados.
+                      Sessões semanais de <b>50 minutos</b>, agendadas nos dias e horários combinados.
                     </Benefit>
                     <Benefit>
-                      Suporte via WhatsApp para esclarecer dúvidas pontuais.
+                      <b>Suporte via WhatsApp</b> para esclarecer dúvidas pontuais.
                     </Benefit>
                     <Benefit>
-                      Sessão de feedback personalizada para monitorar seu progresso.
+                      <b>Sessão de feedback</b> personalizada para monitorar seu progresso.
                     </Benefit>
                     <Benefit>
-                      Acesso a uma playlist exclusiva de Regulação Emocional no Spotify.
+                      Acesso a uma <b>playlist</b> exclusiva de <b>Regulação Emocional</b> no Spotify.
                     </Benefit>
                     <Benefit>
-                      Materiais digitais e exercícios terapêuticos disponibilizados para você.
+                      <b>Materiais digitais</b> e exercícios terapêuticos disponibilizados para você.
                     </Benefit>
                     <Benefit>
-                      Participação no Close Friends exclusivo para pacientes.
+                      Participação no <b>Close Friends</b> exclusivo para pacientes.
                     </Benefit>
                     <Benefit>
-                      Jogos terapêuticos para desenvolver e fortalecer habilidades emocionais.
+                      <b>Jogos terapêuticos</b> para desenvolver e fortalecer habilidades emocionais.
                     </Benefit>
                     <Benefit>
-                      Plano de tratamento personalizado de acordo com suas necessidades.
+                      <b>Plano de tratamento personalizado</b> de acordo com suas necessidades.
                     </Benefit>
                   </div>
 
