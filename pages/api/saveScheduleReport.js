@@ -32,10 +32,10 @@ export default async (request, response) => {
 
     if (existingDoc) {
       // Atualizar o documento existente
-      await collection.updateOne({ googleAnalyticsId }, { $inc: { accessCount: 1 }, $set: { onlyView: existingDoc?.onlyView == false ? false : !!onlyView } });
+      await collection.updateOne({ googleAnalyticsId }, { $inc: { accessCount: 1 }, $set: { onlyView: existingDoc?.onlyView == false ? false : !!onlyView, click_date: new Date() } });
     } else {
       // Inserir um novo documento
-      await collection.insertOne({ ...updateObj, onlyView: !!onlyView });
+      await collection.insertOne({ ...updateObj, onlyView: !!onlyView, first_view_date: new Date() });
     }
 
     response.send({
