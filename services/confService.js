@@ -11,6 +11,6 @@ export async function ObterCores() {
 export async function SalvarAgendamento() {
     return await axios.post('/api/saveScheduleReport')
 }
-export async function SalvarAgendamentoView() {
-    return await axios.post('/api/saveScheduleReport', { onlyView: true })
+export async function SalvarAgendamentoView(ip) {
+    return await axios.post('/api/saveScheduleReport', { onlyView: true, ip: ip ?? null })
 }

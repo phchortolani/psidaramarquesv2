@@ -1,23 +1,15 @@
 import { connectToDataBase } from '../../config/mongodb';
+import moment from 'moment';
+import 'moment/locale/pt-br';
+
 
 export default async (request, response) => {
-  //console.log('Requisição recebida:', request.method, request.url);
+/*   console.log('request', request.body) */
 
   try {
     // Extrair o Client ID do Google Analytics
     const googleAnalyticsId = getGoogleAnalyticsId(request.cookies);
-    //verifica se no body tem o parametro que só visualizou a pagina
-
-    const onlyView = request?.body?.onlyView ?? false;
-
-    // Verificar se o googleAnalyticsId foi obtido
-    if (!googleAnalyticsId) {
-      return response.status(400).send({ result: false, message: 'Google Analytics ID ausente' });
-    }
-
-    // Conectar ao banco de dados
-    const db = await connectToDataBase(process.env.MONGODB_URI);
-    const collection = db.collection('agendamento_report');
+    if (!googleAnalyticsId) return response.send({ result: true, });
 
     // Objeto a ser inserido ou atualizado
     const updateObj = {
@@ -25,23 +17,51 @@ export default async (request, response) => {
       accessCount: 1, // Definir 1 no primeiro acesso
     };
 
-    //console.log('Objeto a ser salvo:', updateObj);
+    const onlyView = request?.body?.onlyView ?? false;
+    const ip = request?.body?.ip ?? null;
+
+    if (ip != null) {
+      const geoData = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,regionName,city,query`).then((res) =>
+        res.json()
+      );
+      const country = geoData?.country ?? null;
+      const regionName = geoData?.regionName ?? null;
+      const city = geoData?.city ?? null;
+      updateObj.region = {
+        country: country ?? null,
+        regionName: regionName ?? null,
+        city: city ?? null,
+        ip: ip
+      }
+    }
+
+
+    // Conectar ao banco de dados
+    const db = await connectToDataBase(process.env.MONGODB_URI);
+    const collection = db.collection('agendamento_report');
 
     //verificar se o googleAnalyticsId já existe no banco
     const existingDoc = await collection.findOne({ googleAnalyticsId });
 
+
     if (existingDoc) {
       // Atualizar o documento existente
       await collection.updateOne({ googleAnalyticsId }, {
-        $inc: { accessCount: 1 }, $set: {
+        $inc: { accessCount: 1 },
+        $set: {
           onlyView: existingDoc?.onlyView == false ? false : !!onlyView,
-          click_date: existingDoc?.onlyView == false ? existingDoc?.click_date ?? new Date() : null,
-          first_view_date: onlyView && existingDoc.first_view_date == null ? new Date() : onlyView && existingDoc.first_view_date ? existingDoc.first_view_date : null
+          click_date: !onlyView ? moment().utc(true).toDate() : existingDoc.click_date,
+          region: updateObj.region ? updateObj.region : existingDoc.region,
+          first_view_date: existingDoc.first_view_date
         }
       });
     } else {
       // Inserir um novo documento
-      await collection.insertOne({ ...updateObj, onlyView: !!onlyView, first_view_date: new Date() });
+      await collection.insertOne({
+        ...updateObj,
+        onlyView: !!onlyView,
+        first_view_date: moment().utc(true).toDate()
+      });
     }
 
     response.send({

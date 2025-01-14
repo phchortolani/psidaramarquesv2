@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'phosphor-react';
 import CallToActionButton from '../src/components/buttons/callToAction';
 import { SalvarAgendamentoView } from '../../services/confService';
@@ -147,7 +147,6 @@ const ProcessStep = ({ number, children }) => (
         {children}
       </div>
     </div>
-
     {number !== '4' && <ArrowDown size={32} style={{ color: '#7f73d0', marginLeft: '0.2rem' }} />}
   </div>
 );
@@ -160,11 +159,21 @@ const Benefit = ({ children }) => (
 );
 
 const LandingPage = () => {
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    SalvarAgendamentoView();
+    const saveView = async () => {
+      try {
+        const { ip } = await fetch("https://api.ipify.org?format=json").then(x => x.json())
+        await SalvarAgendamentoView(ip);
+        setIsLoading(false);
+      } catch (error) {
+        setIsLoading(false);
+      }
+    }
+    saveView();
   }, []);
 
+  if (isLoading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><i style={{ fontSize: '2rem', color: '#7f73d0' }} className='fa fa-spinner fa-spin'></i></div>
   return (
     <>
 
@@ -245,6 +254,7 @@ const LandingPage = () => {
                   </p>
                   <CallToActionButton event={'conversion_agendamento'}>
                     <button
+                      type='button'
                       style={styles.button}
                       onMouseOver={(e) => {
                         e.target.style.backgroundColor = '#128C7E'; //cor whatsapp
