@@ -168,13 +168,13 @@ const LandingPage = () => {
   return (
     <>
 
-      <div style={{ backgroundColor: '#f9f6fe', minHeight: '100vh', flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ backgroundColor: '#f9f6fe', minHeight: '100vh', flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center', overflowX: 'hidden' }}>
         <div style={styles.container}>
           <div style={styles.sectionsContainer}>
             <section style={styles.section}>
               <PriceCard>
                 <div style={{ marginBottom: '40px' }}>
-                  <h2 style={styles.sectionTitle}>Passo a Passo</h2>
+                  <h2 style={styles.sectionTitle}>Processo Terapêutico</h2>
                   <div style={styles.processGrid}>
                     <ProcessStep number="1">
                       Usamos as primeiras sessões para nos conhecermos melhor, identificar os principais
