@@ -1,12 +1,14 @@
 'use client'
 import React from "react"
+import { SalvarAgendamento } from "../../../services/confService"
 
 export const GoogleContext = React.createContext({})
 
 export default function GoogleContextProvider({ children }) {
     const GoogleTagAnalyticsFunction = window['gtag'];
 
-    function send_event(event, url) {
+    async function send_event(event, url) {
+        await SalvarAgendamento()
         GoogleTagAnalyticsFunction('event', event,
             {
                 send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/w--rCNGju80YEKyjnocq',

@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import CallToActionButton from '../buttons/callToAction';
-
+/* import CallToActionButton from '../buttons/callToAction'; */
+import Link from 'next/link'
 export default function LandingPage(props) {
-  
+
 
     return (
         <section id="home_Section" className="home container">
@@ -81,10 +81,12 @@ export default function LandingPage(props) {
                         </h6>
                     </div>
                     <div className="btnsLand fade-in">
-                        <CallToActionButton event={'conversion_landingPage'}>
+                        {/*   <CallToActionButton event={'conversion_landingPage'}>
+                           
+                        </CallToActionButton> */}
+                        <Link href="/agendamento">
                             <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua sessão</button>
-                        </CallToActionButton>
-
+                        </Link>
                         {/*                         <button className="btn btn-lg btn-primary btn-inverse">Saiba Mais</button>
  */}                    </div>
                 </div>

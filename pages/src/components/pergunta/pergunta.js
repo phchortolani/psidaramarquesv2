@@ -1,5 +1,6 @@
 import HTMLReactParser from 'html-react-parser'
 import CallToActionButton from '../buttons/callToAction'
+import Link from 'next/link'
 
 export default function PerguntasFrequentes() {
     const peguntas = [
@@ -58,9 +59,12 @@ export default function PerguntasFrequentes() {
                                 <div id={"flush-collapse" + (i)} className="accordion-collapse collapse" aria-labelledby={"flush-heading" + (i)} data-bs-parent="#acPerguntas">
                                     <div className="accordion-body"> {HTMLReactParser(e.resposta)}
                                         <br /><br />
-                                        <CallToActionButton event={'conversion_pergunta_' + (i + 1)}>
+                                        {/*          <CallToActionButton event={'conversion_pergunta_' + (i + 1)}>
+
+                                        </CallToActionButton> */}
+                                        <Link href="/agendamento">
                                             <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua sessão</button>
-                                        </CallToActionButton>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

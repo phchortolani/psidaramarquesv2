@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CallToActionButton from "../buttons/callToAction";
 
 export default function AtendimentoOnline() {
@@ -38,9 +39,12 @@ export default function AtendimentoOnline() {
 
                 </div>
                 <div className="d-flex text-center justify-content-center pb-5">
-                    <CallToActionButton event={'conversion_beneficios_terapia'}>
-                        <button type="button" className="btn-land bg-gradient btn btn-lg btn-primary ">Entrar em contato</button>
-                    </CallToActionButton>
+                    <Link href="/agendamento">
+                        <button type="button" className="btn-land bg-gradient btn btn-lg btn-primary ">Agende sua Sessão</button>
+                    </Link>
+                    {/*       <CallToActionButton event={'conversion_beneficios_terapia'}> */}
+
+                    {/*      </CallToActionButton> */}
                 </div>
             </section>
         </>)

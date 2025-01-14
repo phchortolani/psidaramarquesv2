@@ -7,10 +7,8 @@ import Sobre from './src/components/sobre/sobre'
 import Pergunta from './src/components/pergunta/pergunta'
 import Blog from './src/components/blog/blog'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
-/* import Wave1 from './src/components/waves/Wave1'
-import Wave2 from './src/components/waves/Wave2'
-import Wave3 from './src/components/waves/Wave3' */
+
+
 
 export async function getStaticProps(context) {
   let url = "https://graph.instagram.com/me/media?access_token=" +
@@ -46,22 +44,11 @@ export default function Home({ data }) {
       </Head>
       <Navbar />
       <LandingPage isMobile={isMobile} />
-      {/*  <Wave2 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} /> */}
       <AtendimentoOnline isMobile={isMobile} />
-      {/* <Wave1 color1={"rgba(183, 175, 229, 1)"} color2={"rgba(181.364, 175, 229, 1)"} color3={"rgba(239, 233, 252, 1)"} /> */}
       <Terapia isMobile={isMobile} />
-      {/*  <Wave3 color1={"rgba(183, 175, 229, 1)"} /> */}
       <Sobre isMobile={isMobile} />
       <Pergunta isMobile={isMobile} />
       <Blog data={data} />
-
-
-      {/*    <a href="https://wa.me/message/OQPASIZH7O75G1" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '20px', right: '30px', zIndex: '9999' }}>
-        <div className=' whats shadow'>
-          <i className="fab fa-whatsapp fa-3x text-white"></i>
-        </div>
-      </a> */}
-
       <section id="Contato">
         <div id="footer" className="footer text-center pt-5">
           <div className="container">
@@ -78,7 +65,7 @@ export default function Home({ data }) {
                 <h3 className='text-primary'><b>Contato</b></h3>
               </div>
 
-              <ul style={{ listStyle: "none"}} className='p-1'>
+              <ul style={{ listStyle: "none" }} className='p-1'>
                 <li>
                   <div >
                     <div>
@@ -103,29 +90,13 @@ export default function Home({ data }) {
                     </div>
                   </div>
                 </li>
-
               </ul>
-
             </div>
           </div>
         </div>
       </section >
       <hr className="mt-0 mb-0"></hr>
-      {/*   <div className="py-1" style={{ color: "black", textAlign: "center", background: "#ede7fb" }}>
-        <span className="text-muted small">
-          <span className="text-center text-muted ">
-            Powered by<br /><a href="https://lanisystems.vercel.app" target="_blank" rel="noopener noreferrer"> <img src="/lani-5andar1.svg" width={100}></img></a>
-          </span>
-        </span>
-      </div> */}
 
-      {/*   <footer className="pb-2 mb-2" style={{ background: "#d0b3b5", color: "black", textAlign: "center" }}>
-                    <hr className="mt-0"></hr>
-                    <span className="text-muted small">
-                        Powered by{' '} 
-                        <a target={'_blank'} href="https://lanisystems.vercel.app"><img width={110} src='./lani-5andar2.svg'></img></a>
-                    </span>
-                </footer> */}
     </>
   )
 }
