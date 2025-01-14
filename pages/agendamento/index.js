@@ -8,7 +8,7 @@ import { SalvarAgendamentoView } from '../../services/confService';
 const styles = {
   container: {
     maxWidth: '1200px',
-    margin: '0 auto',
+    margin: '0 20px',
     padding: '20px 20px',
     backgroundColor: '#f9f6fe',
     fontFamily: "'Poppins', sans-serif",
