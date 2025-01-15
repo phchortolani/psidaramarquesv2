@@ -78,9 +78,9 @@ export default async (request, response) => {
 
     await wa.sendMessage(
       '5511957886697',
-      `*[psidaramarques.com.br/agendamento]*\n\n O IP ${ip ?? existingDoc?.ip} acessou o site com o googleAnalyticsId ${googleAnalyticsId} ${onlyView ? 'apenas visualizou' : 'clicou'}.\n\nA região de acesso foi:\n\n${updateObj.region?.country || existingDoc?.region?.country} - ${updateObj.region?.regionName || existingDoc?.region?.regionName} - ${updateObj.region?.city || existingDoc?.region?.city}\n\n`,
+      `*[psidaramarques.com.br/agendamento]*\n\n O IP ${ip || existingDoc?.region?.ip} acessou o site com o googleAnalyticsId ${googleAnalyticsId} ${onlyView ? 'apenas visualizou' : 'clicou'}.\n\nA região de acesso foi:\n\n${updateObj.region?.country || existingDoc?.region?.country} - ${updateObj.region?.regionName || existingDoc?.region?.regionName} - ${updateObj.region?.city || existingDoc?.region?.city}\n\n`,
     );
-    
+
     response.send({ result: true, googleAnalyticsId });
   } catch (error) {
 
