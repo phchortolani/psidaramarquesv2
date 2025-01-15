@@ -1,15 +1,19 @@
 import { connectToDataBase } from '../../config/mongodb';
 import moment from 'moment';
 import 'moment/locale/pt-br';
+import { WhatsappService } from '../../services/whatsappService';
 
 
 export default async (request, response) => {
-/*   console.log('request', request.body) */
+  /*   console.log('request', request.body) */
 
   try {
     // Extrair o Client ID do Google Analytics
     const googleAnalyticsId = getGoogleAnalyticsId(request.cookies);
-    if (!googleAnalyticsId) return response.send({ result: true, });
+    if (!googleAnalyticsId) {
+      console.log('Client ID do Google Analytics não encontrado');
+      return response.send({ result: true });
+    }
 
     // Objeto a ser inserido ou atualizado
     const updateObj = {
@@ -20,7 +24,9 @@ export default async (request, response) => {
     const onlyView = request?.body?.onlyView ?? false;
     const ip = request?.body?.ip ?? null;
 
+    console.log('onlyView: ', onlyView);
     if (ip != null) {
+      console.log('ip: ', ip);
       const geoData = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,regionName,city,query`).then((res) =>
         res.json()
       );
@@ -41,9 +47,11 @@ export default async (request, response) => {
     const collection = db.collection('agendamento_report');
 
     //verificar se o googleAnalyticsId já existe no banco
+    console.log('Verificando se o googleAnalyticsId já existe no banco');
     const existingDoc = await collection.findOne({ googleAnalyticsId });
 
 
+    console.log('existingDoc:', existingDoc);
     if (existingDoc) {
       // Atualizar o documento existente
       await collection.updateOne({ googleAnalyticsId }, {
@@ -64,12 +72,19 @@ export default async (request, response) => {
       });
     }
 
-    response.send({
-      result: true,
-      googleAnalyticsId,
-    });
+    //avisa via whatsapp os dados do agendamento
+
+    const wa = new WhatsappService();
+
+    await wa.sendMessage(
+      '5511957886697',
+      `*[psidaramarques.com.br/agendamento]*\n\n O IP ${ip ?? existingDoc?.ip} acessou o site com o googleAnalyticsId ${googleAnalyticsId} ${onlyView ? 'apenas visualizou' : 'clicou'}.\n\nA região de acesso foi:\n\n${updateObj.region?.country || existingDoc?.region?.country} - ${updateObj.region?.regionName || existingDoc?.region?.regionName} - ${updateObj.region?.city || existingDoc?.region?.city}\n\n`,
+    );
+    
+    response.send({ result: true, googleAnalyticsId });
   } catch (error) {
-    //console.error('Erro ao salvar no banco:', error);
+
+    console.error('Erro ao salvar no banco:', error);
     response.status(500).send({ result: false, error: error.message });
   }
 };
