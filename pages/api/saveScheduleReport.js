@@ -65,16 +65,20 @@ export default async (request, response) => {
       });
     } else {
       // Inserir um novo documento
+      console.log('Inserindo um novo documento');
       await collection.insertOne({
         ...updateObj,
         onlyView: !!onlyView,
         first_view_date: moment().utc(true).toDate()
       });
+      console.log('Novo documento inserido');
     }
 
     //avisa via whatsapp os dados do agendamento
 
     const wa = new WhatsappService();
+
+    console.log('Enviando notificação via whatsapp');
 
     await wa.sendMessage(
       '5511957886697',
