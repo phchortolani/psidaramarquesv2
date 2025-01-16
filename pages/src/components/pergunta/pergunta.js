@@ -19,7 +19,7 @@ export default function PerguntasFrequentes() {
         },
         {
             pergunta: "Qual o valor da consulta?",
-            resposta: "Entre em contato para saber mais sobre valores e formas de pagamento."
+            resposta: "Clique no botão abaixo para acessar a página de agendamento, onde você pode verificar o valor da consulta e agendar sua sessão via WhatsApp."
         },
         {
             pergunta: "Qual público atende?",
