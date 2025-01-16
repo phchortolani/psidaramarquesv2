@@ -210,7 +210,7 @@ const LandingPage = () => {
                   <div style={{ textAlign: 'left' }}>
                     <h2 style={styles.sectionTitle}>O que está incluso:</h2>
                     <Benefit>
-                      Sessões semanais de <b>50 minutos</b>, agendadas nos dias e horários combinados.
+                      Sessões semanais online com duração de <b>50 minutos</b>, realizadas nos dias e horários previamente combinados.
                     </Benefit>
                     <Benefit>
                       <b>Suporte via WhatsApp</b> para esclarecer dúvidas pontuais.
