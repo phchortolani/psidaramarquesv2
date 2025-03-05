@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'phosphor-react';
 import CallToActionButton from '../src/components/buttons/callToAction';
 import { SalvarAgendamentoView } from '../../services/confService';
-import { useIsMobile } from '../hooks/utils';
+import useIsMobile from '../hooks/useIsMobile';
 // src/components/LandingPage/styles.js
 const styles = {
   container: {
@@ -161,18 +161,18 @@ const Benefit = ({ children }) => (
 const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useIsMobile()
-    useEffect(() => {
-      const saveView = async () => {
-        try {
-          const { ip } = await fetch("https://api.ipify.org?format=json").then(x => x.json())
-          await SalvarAgendamentoView(ip);
-          setIsLoading(false);
-        } catch (error) {
-          setIsLoading(false);
-        }
+  useEffect(() => {
+    const saveView = async () => {
+      try {
+        const { ip } = await fetch("https://api.ipify.org?format=json").then(x => x.json())
+        await SalvarAgendamentoView(ip);
+        setIsLoading(false);
+      } catch (error) {
+        setIsLoading(false);
       }
-      saveView();
-    }, []);
+    }
+    saveView();
+  }, []);
 
   if (isLoading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><i style={{ fontSize: '2rem', color: '#7f73d0' }} className='fa fa-spinner fa-spin'></i></div>
   return (
@@ -261,7 +261,7 @@ const LandingPage = () => {
                       <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal', marginBottom: '5px' }}>
                         sessão única
                       </small>
-                     {/*  <div>
+                      {/*  <div>
                         <small style={{ lineHeight: '1.6', color: '#666' }}>*Sessão individual.</small>
                       </div> */}
                     </div>
