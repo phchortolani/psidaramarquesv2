@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'phosphor-react';
 import CallToActionButton from '../src/components/buttons/callToAction';
 import { SalvarAgendamentoView } from '../../services/confService';
-
+import { useIsMobile } from '../hooks/utils';
 // src/components/LandingPage/styles.js
 const styles = {
   container: {
@@ -160,18 +160,19 @@ const Benefit = ({ children }) => (
 
 const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const saveView = async () => {
-      try {
-        const { ip } = await fetch("https://api.ipify.org?format=json").then(x => x.json())
-        await SalvarAgendamentoView(ip);
-        setIsLoading(false);
-      } catch (error) {
-        setIsLoading(false);
+  const isMobile = useIsMobile()
+    useEffect(() => {
+      const saveView = async () => {
+        try {
+          const { ip } = await fetch("https://api.ipify.org?format=json").then(x => x.json())
+          await SalvarAgendamentoView(ip);
+          setIsLoading(false);
+        } catch (error) {
+          setIsLoading(false);
+        }
       }
-    }
-    saveView();
-  }, []);
+      saveView();
+    }, []);
 
   if (isLoading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><i style={{ fontSize: '2rem', color: '#7f73d0' }} className='fa fa-spinner fa-spin'></i></div>
   return (
@@ -236,18 +237,72 @@ const LandingPage = () => {
                   </div>
 
                   <hr></hr>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal' }}>Plano mensal de <b>4 sessões</b></small>
-                    <small style={{ fontSize: '0.8rem', color: '#666', fontWeight: 'normal', marginTop: '5px', textDecoration: 'line-through' }}>R$ 440,00 </small>
-                    <div style={styles.priceHighlight}>R$ 400,00  <b style={{ fontSize: '0.8rem', fontWeight: 'normal', color: '#4CAF50' }}>R$ 40,00 OFF</b>
-                    </div>
-                    <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal', marginBottom: '5px' }}> por mês* </small>
-                    <div>
-                      <small style={{ lineHeight: '1.6', color: '#666' }}>
-                        *O valor de sessões avulsas é de: R$ 110,00.
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      gap: 16,
+                      justifyContent: 'space-between',
+                      flexWrap: isMobile ? 'wrap' : 'nowrap',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        flex: '1',
+                        minWidth: '250px',
+                      }}
+                    >
+                      <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal' }}>
+                        Sessão <b>avulsa</b>
                       </small>
+                      <div style={{ ...styles.priceHighlight, marginTop: '26px' }}>R$ 110,00</div>
+                      <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal', marginBottom: '5px' }}>
+                        sessão única
+                      </small>
+                     {/*  <div>
+                        <small style={{ lineHeight: '1.6', color: '#666' }}>*Sessão individual.</small>
+                      </div> */}
+                    </div>
+                    {isMobile && <hr style={{ width: '100%', margin: '20px 0' }} />}
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        flex: '1',
+                        minWidth: '250px',
+                      }}
+                    >
+                      <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal' }}>
+                        Plano mensal de <b>4 sessões</b>
+                      </small>
+                      <small
+                        style={{
+                          fontSize: '0.8rem',
+                          color: '#666',
+                          fontWeight: 'normal',
+                          marginTop: '5px',
+                          textDecoration: 'line-through',
+                        }}
+                      >
+                        R$ 440,00
+                      </small>
+                      <div style={styles.priceHighlight}>
+                        R$ 400,00 <b style={{ fontSize: '0.8rem', fontWeight: 'normal', color: '#4CAF50' }}>R$ 40,00 OFF</b>
+                      </div>
+                      <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal', marginBottom: '5px' }}>
+                        por mês
+                      </small>
+                      {/*        <div>
+                        <small style={{ lineHeight: '1.6', color: '#666' }}>
+                          *O valor de sessões avulsas é de: R$ 110,00.
+                        </small>
+                      </div> */}
                     </div>
                   </div>
+
+
                   <p style={{ lineHeight: '1.6', textAlign: 'left', marginTop: '10px', textAlign: 'center' }}>
                     Os pagamentos são feitos de forma antecipada até o quinto dia útil de cada mês,
                     via PIX ou transferência bancária.
@@ -269,6 +324,7 @@ const LandingPage = () => {
                       Agende sua Sessão
                     </button>
                   </CallToActionButton>
+
 
                 </div>
               </PriceCard>
