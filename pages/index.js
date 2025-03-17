@@ -20,7 +20,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      data: json.data,
+      data: json?.data,
     },
     revalidate: 60, /* In seconds */
 

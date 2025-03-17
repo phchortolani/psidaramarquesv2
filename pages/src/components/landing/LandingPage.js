@@ -8,17 +8,9 @@ export default function LandingPage(props) {
         <section id="home_Section" className="home container">
 
             <div className="landingContent ">
-
                 <div className="titleLand push-left">
-                    {/*   <h3>
-
-                        Aprenda a <span className="text-primary">lidar com a ansiedade </span>  para uma vida mais leve!
-                    </h3> */}
-                    {/*  <h3 className='text-primary'>
-                        Aprenda a <b className="titulo-primary">lidar com a ansiedade </b>  para uma vida mais leve!
-                    </h3> */}
                     <h3 className='text-primary'>
-                        A  <b className="titulo-primary">ansiedade</b> não precisa dominar a sua vida
+                        Terapia on-line para <b className="titulo-primary">ansiedade</b>
                     </h3>
                     <h5 className='text-primary'>
                         Experimente um tratamento especializado e comprovado para ansiedade!
