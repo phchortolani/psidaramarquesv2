@@ -63,7 +63,7 @@ export default function PerguntasFrequentes() {
 
                                         </CallToActionButton> */}
                                         <Link href="/agendamento">
-                                            <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua sessão</button>
+                                            <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua Sessão Online</button>
                                         </Link>
                                     </div>
                                 </div>

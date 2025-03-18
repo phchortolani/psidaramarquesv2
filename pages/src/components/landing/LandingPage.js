@@ -15,7 +15,7 @@ export default function LandingPage(props) {
                         {/*   Terapia on-line para <b className="titulo-primary">ansiedade</b> */}
                     </h3>
                     <h5 className='text-primary '>
-                        Tenha um acompanhamento terapêutico personalizado para o seu bem-estar
+                        Tenha uma terapia on-line personalizada para o seu bem-estar
                     </h5>
                 </div>
                 <div className="landingImgContent p-2 fade-in grow-in">
@@ -68,7 +68,7 @@ export default function LandingPage(props) {
                     <div className="text-primary push-up">
                         <h3> Dara Marques</h3>
                         <h6>
-                            Psicóloga e Psicoterapeuta
+                            Psicóloga e Psicoterapeuta online
                         </h6>
                         <h6>
                             CRP 06/164999
@@ -79,7 +79,7 @@ export default function LandingPage(props) {
                            
                         </CallToActionButton> */}
                         <Link href="/agendamento">
-                            <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua sessão</button>
+                            <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua Sessão Online</button>
                         </Link>
                         {/*                         <button className="btn btn-lg btn-primary btn-inverse">Saiba Mais</button>
  */}                    </div>

@@ -44,7 +44,7 @@ export default function Sobre(props) {
                         <div className="btnsLand ">
                             {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
                             <Link href="/agendamento">
-                                <button type="button" className="btn-land btn bg-gradient btn-primary " >Agende sua sessão</button>
+                                <button type="button" className="btn-land btn bg-gradient btn-primary " >Agende sua Sessão Online</button>
                             </Link>
                         </div>
                     </div>

@@ -321,7 +321,7 @@ const LandingPage = () => {
                       }}
                     >
                       <i className="fab fa-whatsapp" style={{ marginRight: '10px', background: 'transparent' }}></i>
-                      Agende sua Sessão
+                      Agende sua Sessão Online 
                     </button>
                   </CallToActionButton>
 
