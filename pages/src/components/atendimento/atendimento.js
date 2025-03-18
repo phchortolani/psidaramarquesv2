@@ -20,7 +20,7 @@ export default function AtendimentoOnline() {
                         </div>
                         <div className="atendimentoCards">
                             <h4 className="text-primary">Tratamento amplo</h4>
-                            <p>Além de abordar transtornos psicológicos como transtornos de ansiedade, depressão, a TCC atende a outras demandas, como mudança de hábitos, autoestima e relacionamentos.</p>
+                            <p> A TCC oferece suporte para diversas áreas do seu bem-estar, incluindo mudanças de hábitos, autoestima e relacionamentos.</p>
                         </div>
                         <div className="atendimentoCards">
                             <h4 className="text-primary">Individualizado</h4>

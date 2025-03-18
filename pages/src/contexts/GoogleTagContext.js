@@ -5,9 +5,11 @@ import { SalvarAgendamento } from "../../../services/confService"
 export const GoogleContext = React.createContext({})
 
 export default function GoogleContextProvider({ children }) {
-    const GoogleTagAnalyticsFunction = window['gtag'];
+
 
     async function send_event(event, url) {
+        const GoogleTagAnalyticsFunction = window['gtag'];
+
         await SalvarAgendamento()
         GoogleTagAnalyticsFunction('event', event,
             {
@@ -21,6 +23,8 @@ export default function GoogleContextProvider({ children }) {
     }
 
     function send_track(event) {
+        const GoogleTagAnalyticsFunction = window['gtag'];
+
         GoogleTagAnalyticsFunction('event', event,
             {
                 send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/w--rCNGju80YEKyjnocq',

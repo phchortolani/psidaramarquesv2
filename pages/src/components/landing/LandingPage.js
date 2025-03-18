@@ -1,6 +1,7 @@
 import Image from 'next/image'
 /* import CallToActionButton from '../buttons/callToAction'; */
 import Link from 'next/link'
+import { useEffect } from 'react'
 export default function LandingPage(props) {
 
 
@@ -10,10 +11,11 @@ export default function LandingPage(props) {
             <div className="landingContent ">
                 <div className="titleLand push-left">
                     <h3 className='text-primary'>
-                        Terapia on-line para <b className="titulo-primary">ansiedade</b>
+                        <b className="titulo-primary"> Uma  vida mais leve e </b>  <b className="titulo-primary">equilibrada</b>
+                        {/*   Terapia on-line para <b className="titulo-primary">ansiedade</b> */}
                     </h3>
-                    <h5 className='text-primary'>
-                        Experimente um tratamento especializado e comprovado para ansiedade!
+                    <h5 className='text-primary '>
+                        Tenha um acompanhamento terapêutico personalizado para o seu bem-estar
                     </h5>
                 </div>
                 <div className="landingImgContent p-2 fade-in grow-in">
@@ -21,7 +23,7 @@ export default function LandingPage(props) {
                         props.isMobile && <Image
                             style={{ borderRadius: '100%' }}
                             className='cover '
-                            src="/sobreImg.png"
+                            src="/psi3.png"
                             alt="Psicóloga Dara Marques"
                             width={300}
                             height={300}
@@ -32,7 +34,7 @@ export default function LandingPage(props) {
                         !props.isMobile && <Image
                             style={{ borderRadius: '100%' }}
                             className='cover'
-                            src="/sobreImg.png"
+                            src="/psi3.png"
                             alt="Psicóloga Dara Marques"
                             width={480}
                             height={480}

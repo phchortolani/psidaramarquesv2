@@ -37,7 +37,7 @@ const styles = {
     textAlign: 'center',
   },
   sectionTitle: {
-    color: '#7f73d0',
+    color: '#7a5535',
     fontSize: '2rem',
     marginBottom: '40px',
     textAlign: 'center',
@@ -65,7 +65,7 @@ const styles = {
     flexDirection: 'column',
   },
   stepNumber: {
-    backgroundColor: '#7f73d0',
+    backgroundColor: '#7a5535',
     color: 'white',
     width: '40px',
     height: '40px',
@@ -147,7 +147,7 @@ const ProcessStep = ({ number, children }) => (
         {children}
       </div>
     </div>
-    {number !== '4' && <ArrowDown size={32} style={{ color: '#7f73d0', marginLeft: '0.2rem' }} />}
+    {number !== '4' && <ArrowDown size={32} style={{ color: '#7a5535', marginLeft: '0.2rem' }} />}
   </div>
 );
 
@@ -174,7 +174,7 @@ const LandingPage = () => {
     saveView();
   }, []);
 
-  if (isLoading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><i style={{ fontSize: '2rem', color: '#7f73d0' }} className='fa fa-spinner fa-spin'></i></div>
+  if (isLoading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><i style={{ fontSize: '2rem', color: '#7a5535' }} className='fa fa-spinner fa-spin'></i></div>
   return (
     <>
 

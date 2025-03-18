@@ -30,9 +30,9 @@ export default function Sobre(props) {
                 </div>
 
                 <div className=" sobreCards">
-                    <div className="text-muted aboutText">
+                    <div className="aboutText text-primary">
                         <h5>
-                            <b className="text-primary ">Dara Macedo Marques Hortolani <b className="text-muted pt-4 small">- CRP 06/164999</b></b>
+                            <b className="text-primary ">Dara Macedo Marques Hortolani <b className="text-primary pt-4 small">- CRP 06/164999</b></b>
                         </h5>
                         <br></br>
                         <p>Olá, me chamo Dara e primeiramente gostaria de dizer que sou apaixonada pela psicologia e amo ajudar pessoas a se desenvolverem e entenderem melhor a si mesmas com a psicoterapia, e a partir disso, ir fazendo mudanças saudáveis e duradouras.</p>

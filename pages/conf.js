@@ -15,13 +15,20 @@ function Conf() {
     }
     ).catch(x => setCores([])).finally()
   }, [])
-
+  /* 
+    --primary-color: #7a5535;
+    --secondary-color: #b7afe5;
+    --back-color: #e5d9ce;
+    --tertiary-color: #404435;
+    --atendimento-color: #e9e3f9;
+    --atendimento-card-color: #f9f6fe;
+    --titulo-primary: #987965; */
 
   const data2 = [
-    { name: "--primary-color", value: "#7f73d0" },
+    { name: "--primary-color", value: "#7a5535" },
     { name: "--secondary-color", value: "#b7afe5" },
-    { name: "--back-color", value: "#ffffff" },
-    { name: "--tertiary-color", value: "#ede7fb" },
+    { name: "--back-color", value: "#e5d9ce" },
+    { name: "--tertiary-color", value: "#404435" },
     { name: "--atendimento-color", value: "#e9e3f9" },
     { name: "--atendimento-card-color", value: "#f9f6fe" }
   ]

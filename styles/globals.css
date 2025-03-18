@@ -1,15 +1,17 @@
 :root {
-  --primary-color: #7f73d0;
+  --primary-color: #7a5535;
   --secondary-color: #b7afe5;
-  --back-color: #fff;
-  --tertiary-color: #ede7fb;
+  --back-color: #FFF;
+  --tertiary-color: #e5d9ce;
   --atendimento-color: #e9e3f9;
-  --atendimento-card-color: #f9f6fe;
-  --titulo-primary: #987965;
-  /*  --primary-color: #7f73d0;
-  --secondary-color: #b7afe5;
+  --atendimento-card-color: #e5d9ce;
+  --titulo-primary: #a67c58;
+  --nav-item: #7a5535;
+  --text-primary: #60452a;
+  /*  --primary-color: #7a5535;
+  --primary-color: #b7afe5;
   --back-color: #fff;
-  --tertiary-color: #ede7fb;
+  --tertiary-color: #404435;
   --atendimento-color: #e9e3f9;
   --atendimento-card-color: #f9f6fe; */
 }
@@ -32,6 +34,10 @@ html {
 
 .titulo-primary {
   color: var(--titulo-primary);
+}
+
+.nav-item {
+  color: var(--nav-item)
 }
 
 .text-atendimento-color {
@@ -266,7 +272,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .text-secondary {
-  color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .landingImgContent {
@@ -368,25 +374,25 @@ body::-webkit-scrollbar-thumb {
   border: var(--primary-color) solid 1px;
   color: var(--primary-color);
   padding: 12px 18px;
-  transition: border-color .3s ease-in-out, color .3s ease-in-out;
-  -moz-transition: border-color .3s ease-in-out, color .3s ease-in-out;
-  -webkit-transition: border-color .3s ease-in-out, color .3s ease-in-out;
+  transition: border-color .1s ease-in-out, color .1s ease-in-out;
+  -moz-transition: border-color .1s ease-in-out, color .1s ease-in-out;
+  -webkit-transition: border-color .1s ease-in-out, color .1s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .btn-primary:focus {
   color: var(--back-color);
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.25rem var(--secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem var(--primary-color);
 }
 
 .text-primary {
-  color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
 }
 
 .btn-check:active + .btn-primary,
@@ -395,8 +401,8 @@ body::-webkit-scrollbar-thumb {
 .btn-primary:active,
 .show > .btn-primary.dropdown-toggle {
   color: var(--back-color);
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .btn-check:active + .btn-primary:focus,
@@ -414,15 +420,21 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 0;
   gap: 1.5em;
   list-style: none;
-  color: #414548;
+  color: var(--nav-item);
 }
 
 .nav-link {
   transition-duration: 200ms;
+  color: var(--nav-item);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--nav-item) !important;
 }
 
 .nav-link.active {
-  color: var(--primary-color) !important;
+  color: var(--nav-item) !important;
+  font-weight:600 !important;
 }
 
 a:hover {
@@ -535,8 +547,8 @@ section#blog {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--titulo-primary);
+  color: var(--atendimento-card-color) !important;
 }
 
 .accordion-body {
@@ -574,7 +586,7 @@ section.terapia {
 }
 
 .wave1Back {
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .headerSection {
@@ -619,7 +631,7 @@ section.terapia {
 
 .logoImg.rolldown {
   color: transparent;
-  background: white;
+ /*  background: white; */
   border-radius: 100%;
   height: 32px;
   width: 42px;
