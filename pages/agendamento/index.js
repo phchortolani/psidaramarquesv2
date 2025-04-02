@@ -257,7 +257,7 @@ const LandingPage = () => {
                       <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal' }}>
                         Sessão <b>avulsa</b>
                       </small>
-                      <div style={{ ...styles.priceHighlight, marginTop: '26px' }}>R$ 110,00</div>
+                      <div style={{ ...styles.priceHighlight, marginTop: '26px' }}>R$ 85,00</div>
                       <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal', marginBottom: '5px' }}>
                         sessão única
                       </small>
@@ -286,10 +286,10 @@ const LandingPage = () => {
                           textDecoration: 'line-through',
                         }}
                       >
-                        R$ 440,00
+                        R$ 340,00
                       </small>
                       <div style={styles.priceHighlight}>
-                        R$ 400,00 <b style={{ fontSize: '0.8rem', fontWeight: 'normal', color: '#4CAF50' }}>R$ 40,00 OFF</b>
+                        R$ 320,00 <b style={{ fontSize: '0.8rem', fontWeight: 'normal', color: '#4CAF50' }}>R$ 20,00 OFF</b>
                       </div>
                       <small style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal', marginBottom: '5px' }}>
                         por mês
