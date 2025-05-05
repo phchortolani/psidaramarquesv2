@@ -39,12 +39,12 @@ export default function AtendimentoOnline() {
 
                 </div>
                 <div className="d-flex text-center justify-content-center pb-5">
-                    <Link href="/agendamento">
+                  {/*   <Link href="/agendamento">
                         <button type="button" className="btn-land bg-gradient btn btn-lg btn-primary ">Agende sua Sessão Online</button>
-                    </Link>
-                    {/*       <CallToActionButton event={'conversion_beneficios_terapia'}> */}
-
-                    {/*      </CallToActionButton> */}
+                    </Link> */}
+                    <CallToActionButton event={'conversion_beneficios_terapia'}>
+                        <button type="button" className="btn-land bg-gradient btn btn-lg btn-primary ">Agende sua Sessão Online</button>
+                    </CallToActionButton>
                 </div>
             </section>
         </>)

@@ -1,4 +1,4 @@
-/* import CallToActionButton from "../buttons/callToAction"; */
+import CallToActionButton from "../buttons/callToAction";
 import Link from 'next/link'
 export default function Sobre(props) {
 
@@ -43,9 +43,12 @@ export default function Sobre(props) {
                         <b>Vamos juntos trilhar esse caminho?</b>
                         <div className="btnsLand ">
                             {/*  <button className="btn btn-lg btn-primary btn-inverse px-2">Saiba Mais</button> */}
-                            <Link href="/agendamento">
+                            {/*      <Link href="/agendamento">
                                 <button type="button" className="btn-land btn bg-gradient btn-primary " >Agende sua Sessão Online</button>
-                            </Link>
+                            </Link> */}
+                            <CallToActionButton event={'conversion_sobre_mim'}>
+                                <button type="button" className="btn-land btn bg-gradient btn-primary " >Agende sua Sessão Online</button>
+                            </CallToActionButton>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-/* import CallToActionButton from '../buttons/callToAction'; */
+import CallToActionButton from '../buttons/callToAction';
 import Link from 'next/link'
 import { useEffect } from 'react'
 export default function LandingPage(props) {
@@ -75,12 +75,12 @@ export default function LandingPage(props) {
                         </h6>
                     </div>
                     <div className="btnsLand fade-in">
-                        {/*   <CallToActionButton event={'conversion_landingPage'}>
-                           
-                        </CallToActionButton> */}
-                        <Link href="/agendamento">
+                        <CallToActionButton event={'conversion_landingPage'}>
                             <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua Sessão Online</button>
-                        </Link>
+                        </CallToActionButton>
+                        {/*     <Link href="/agendamento">
+                            <button className="btn-land bg-gradient btn btn-lg btn-primary pulse">Agende sua Sessão Online</button>
+                        </Link> */}
                         {/*                         <button className="btn btn-lg btn-primary btn-inverse">Saiba Mais</button>
  */}                    </div>
                 </div>

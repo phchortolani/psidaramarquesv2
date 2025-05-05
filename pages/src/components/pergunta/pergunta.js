@@ -59,12 +59,12 @@ export default function PerguntasFrequentes() {
                                 <div id={"flush-collapse" + (i)} className="accordion-collapse collapse" aria-labelledby={"flush-heading" + (i)} data-bs-parent="#acPerguntas">
                                     <div className="accordion-body"> {HTMLReactParser(e.resposta)}
                                         <br /><br />
-                                        {/*          <CallToActionButton event={'conversion_pergunta_' + (i + 1)}>
-
-                                        </CallToActionButton> */}
-                                        <Link href="/agendamento">
+                                        {<CallToActionButton event={'conversion_pergunta_' + (i + 1)}>
                                             <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua Sessão Online</button>
-                                        </Link>
+                                        </CallToActionButton>}
+                                        {/*    <Link href="/agendamento">
+                                            <button type='button' className='btn-land bg-gradient btn-primary btn-inverse' >Agende sua Sessão Online</button>
+                                        </Link> */}
                                     </div>
                                 </div>
                             </div>

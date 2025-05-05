@@ -10,7 +10,6 @@ export default function GoogleContextProvider({ children }) {
     async function send_event(event, url) {
         const GoogleTagAnalyticsFunction = window['gtag'];
 
-        await SalvarAgendamento()
         GoogleTagAnalyticsFunction('event', event,
             {
                 send_to: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS + '/w--rCNGju80YEKyjnocq',
@@ -20,6 +19,8 @@ export default function GoogleContextProvider({ children }) {
         GoogleTagAnalyticsFunction('event', 'conversion', {
             send_to: process.env.NEXT_PUBLIC_GOOGLE_ADS + '/aS_8CIaE2c4YEJWRxtso'
         });
+
+        await SalvarAgendamento()
     }
 
     function send_track(event) {
